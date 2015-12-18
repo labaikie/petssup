@@ -1,0 +1,15 @@
+<h1>Hello <%= @user.name %></h1>
+  <div>
+    <div>
+    <%= image_tag @user.profile_img %>
+    </div>
+
+    <div>
+    <%= @user.email %>
+    </div>
+
+    <div>
+    Member Since: <%= @user.created_at %>
+    </div>
+
+  </div>

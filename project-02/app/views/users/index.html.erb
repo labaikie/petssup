@@ -1,0 +1,16 @@
+<h1>Welcome to La's Project-02</h1>
+
+<% flash.each do |key,value| %>
+<div class="<%= key %>" > <%= value %></div>
+<% end %>
+
+<%= link_to "Register", new_user_path %>
+
+<% if current_user %>
+  <%=link_to "View My Petfile", user_path(current_user) %>
+  <%= link_to "Logout", destroy_session_path %>
+<% else %>
+  <%= link_to "Login", new_session_path %>
+
+<% end %>
+
