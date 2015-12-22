@@ -1,21 +1,29 @@
-<div>
-<%= form_for @user, url: create_session_path do |f| %>
+<div id ="loginDp">
+  <div class="screen">
+    <div class="message">
 
-<% flash.each do |key,value| %>
-  <div class="<%=key %>" > <%= value %> </div>
-<% end %>
+    <%= form_for @user, url: create_session_path do |f| %>
 
-  <%= f.label :email %>
-  <br>
-  <%= f.email_field :email %>
-  <br>
+      <% flash.each do |key,value| %>
+        <div class="<%=key %>" > <%= value %> </div>
+      <% end %>
 
-  <%=f.label :password %>
-  <br>
-  <%=f.password_field :password %>
-  <br>
+        <div class="form-group">
+          <div><%= f.label :email %></div>
+          <div><%= f.email_field :email, class: "form-field" %></div>
+        </div>
 
-  <%= f.submit "Log In" %>
+        <div class="form-group">
+          <div><%= f.label :password %></div>
+          <div><%= f.password_field :password, class: "form-field" %></div>
+        </div>
 
-<% end %>
+        <%= f.submit "Log In", class: "btn btn-success" %>
+
+    <% end %>
+      <div class="btn btn-default">
+        <%= link_to "Not a Member? Join Us!", new_user_path %>
+      </div>
+    </div>
+  </div>
 </div>

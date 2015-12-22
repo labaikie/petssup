@@ -1,4 +1,4 @@
-#joinDp {
+#joinDp, #loginDp {
   display: block;
   position: absolute;
   top: 0px;
@@ -9,7 +9,7 @@
   background-color: rgba(0,0,0,0.35);
 }
 
-#screen {
+.screen {
   margin: 15% auto 0 auto;
   width: 45%;
   height: 50%;
