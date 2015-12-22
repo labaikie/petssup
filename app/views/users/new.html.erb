@@ -1,25 +1,39 @@
-<div>
-<%= form_for @user do |f| %>
+<div id ="joinDp">
+  <div id="screen">
+    <div class="message">
 
-<% flash.each do |key,value| %>
-  <div class="<%=key %>" > <%= value %> </div>
-<% end %>
+    <%= form_for @user do |f| %>
 
-  <%= f.label :email %>
-  <br>
-  <%= f.email_field :email %>
-  <br>
+      <% flash.each do |key,value| %>
+      <div class="<%=key %>" > <%= value %> </div>
+      <% end %>
 
-  <%=f.label :password %>
-  <br>
-  <%=f.password_field :password %>
-  <br>
+      <div class="form-group">
+        <div><%= f.label :email %></div>
+        <div><%= f.email_field :email, class: "form-field" %></div>
+      </div>
 
-  <%= f.label :password_confirmation, "Confirmation" %>
-  <br>
-  <%= f.password_field :password_confirmation %>
-  <br>
-  <%= f.submit "Sign-up" %>
+      <div class="form-group">
+        <div><%=f.label :password %></div>
+        <div><%=f.password_field :password, class: "form-field" %></div>
+      </div>
 
-<% end %>
+      <div class="form-group">
+        <div><%=f.label :name %></div>
+        <div><%=f.text_field :name, class: "form-field" %></div>
+      </div>
+
+      <div class="form-group">
+        <div><%= f.label :password_confirmation, "Confirm Password" %></div>
+        <div><%= f.password_field :password_confirmation, class: "form-field" %></div>
+      </div>
+
+      <%= f.submit "Sign-up", class: "btn btn-success"  %>
+
+    <% end %>
+      <div class="btn btn-default">
+        <%= link_to "Already a Member? Log-in", new_session_path %>
+      </div>
+    </div>
+  </div>
 </div>

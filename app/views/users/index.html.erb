@@ -1,16 +1,35 @@
-<h1>Welcome to La's Project-02</h1>
+<div class="welcome">
 
-<% flash.each do |key,value| %>
-<div class="<%= key %>" > <%= value %></div>
-<% end %>
+  <header>
+    <% flash.each do |key,value| %>
+    <div class="<%= key %>"><%= value %></div>
+    <% end %>
+    <div id="join">
+      Join Us
+      <%= link_to "Join Us", new_user_path %>
+    </div>
+    <div>
+      <% if current_user %>
+      <%= link_to "View My Petfile", user_path(current_user) %>
+      <%= link_to "Sign Out", destroy_session_path %>
+      <% else %>
+      Sign In
+      <%= link_to "Sign In", new_session_path %>
+      <% end %>
+    </div>
+  </header>
 
-<%= link_to "Register", new_user_path %>
+  <div id="logo">Site Name Here</div>
+  <div class="main-msg">Lorem ipsum dolor sit amet, ex nihil saepe salutandi pri. Id volumus conclusionemque vel. Ut usu fugit insolens repudiandae, aeque audire percipit qui ex. Ei tale feugait dolores eum, errem ceteros ut sed. Eum id percipit interpretaris, sale alterum ceteros vim ei. No graece tempor sententiae eos, ea deserunt iracundia posidonium pro. Sea ignota disputationi ad, pro ei dicunt omittam, usu et diam vide constituto.</div>
 
-<% if current_user %>
-  <%=link_to "View My Petfile", user_path(current_user) %>
-  <%= link_to "Logout", destroy_session_path %>
-<% else %>
-  <%= link_to "Login", new_session_path %>
+</div>
 
-<% end %>
+<div class="content">
 
+  <div class="column">
+  </div>
+
+  <div class="column">
+  </div>
+
+</div>

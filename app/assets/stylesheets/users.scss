@@ -1,3 +1,56 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*FONTS*/
+
+$logo-font: 'Pacifico', cursive;
+$accent-font1: 'Swanky and Moo Moo', cursive;
+$accent-font2: 'Laila', serif;
+$main-font: 'Rokkitt', serif;
+
+/*COLORS*/
+
+.welcome, .content {
+  font-family: $main-font;
+}
+
+.welcome {
+  background-color: #cccccc;
+}
+
+.content {
+  background-color: green;
+}
+
+header {
+  min-height: 50px;
+  border-bottom: 3px black solid;
+}
+
+header div {
+  float: right;
+  margin: 0 10px;
+  font-family: $accent-font1;
+  font-size: 30px;
+  border: 1px black solid;
+}
+
+#logo {
+  margin: 35% 10% 0 10%;
+  font-family: $logo-font;
+  font-size: 100px;
+  border: 1px black solid;
+}
+
+.main-msg {
+  margin: 0 10%;
+  min-height: 200px;
+  font-size: 24px;
+  border: 1px black solid;
+}
+
+.column {
+  margin-left: 10%;
+  width: 500px;
+  min-height: 800px;
+  float: left;
+  border: 1px black solid;
+}
+

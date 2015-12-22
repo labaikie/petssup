@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(user_params[:password])
       session[:user_id]= user.id
       flash[:success] = "Welcome back, #{user.name}"
-      redirect_to mumble_path
+      redirect_to users_path
     else
       flash[:error] = "Unable to sign in"
       redirect_to new_session_path
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    flash[:error] = "Bye, bye #{:user.name}"
+    flash[:error] = "Bye, bye"
     redirect_to users_path
   end
 
