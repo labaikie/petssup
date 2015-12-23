@@ -28,12 +28,12 @@
         <div><%= f.password_field :password_confirmation, class: "form-field" %></div>
       </div>
 
-      <%= f.submit "Sign-up", class: "btn btn-success" %>
+      <%= f.submit "Sign-up" %>
+      <%= link_to "Already a Member? Log-in", new_session_path %>
 
     <% end %>
-      <div class="btn btn-default">
-        <%= link_to "Already a Member? Log-in", new_session_path %>
-      </div>
+
+
     </div>
   </div>
 </div>

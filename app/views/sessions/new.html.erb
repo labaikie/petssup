@@ -18,12 +18,11 @@
           <div><%= f.password_field :password, class: "form-field" %></div>
         </div>
 
-        <%= f.submit "Log In", class: "btn btn-success" %>
+        <%= f.submit "Log In" %>
+        <%= link_to "Not a Member? Join Us!", new_user_path %>
 
     <% end %>
-      <div class="btn btn-default">
-        <%= link_to "Not a Member? Join Us!", new_user_path %>
-      </div>
+
     </div>
   </div>
 </div>

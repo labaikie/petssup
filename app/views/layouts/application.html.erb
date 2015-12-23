@@ -11,6 +11,29 @@
 
 <body>
 
+  <header>
+      <% if current_user %>
+    <div>
+      <%= link_to "Sign Out", destroy_session_path %>
+    </div>
+    <div>
+      <%= link_to "View My Petfile", user_path(current_user) %>
+    </div>
+      <% flash.each do |key, value| %>
+      <div class="<%= key %>"><%= value %></div>
+      <% end %>
+      <% else %>
+    <div id="join">
+      Join Us
+      <%= link_to "Join Us", new_user_path %>
+    </div>
+    <div>
+      Sign In
+      <%= link_to "Sign In", new_session_path %>
+    </div>
+      <% end %>
+  </header>
+
   <%= yield %>
 
   <footer>
