@@ -1,15 +1,74 @@
-<h1>Hello <%= @user.name %></h1>
-  <div>
-    <div>
-    <%= image_tag @user.profile_img %>
+<div id="profile">
+    <div class="accent">Hello, <%= @user.name %>!</div>
+      <div>
+        <div class="pf-row">
+            <%= image_tag @user.profile_img, class: 'img-circle' %>
+        </div>
+        <div class="pf-row">
+            <div>Email</div>
+            <div><%= @user.email %></div>
+        </div>
+        <div class="pf-row">
+            <div>Password</div>
+            <div><%= @user.password %></div>
+        </div>
+        <div class="pf-row">
+            <div>I'm a</div>
+            <div><%= @user.animal_type %></div>
+        </div>
+        <div class="pf-row">
+            <div>Age</div>
+            <div><%= @user.birthday %></div>
+        </div>
+        <div class="pf-row">
+            <div>Gender</div>
+            <div><%= @user.gender %></div>
+        </div>
+        <div class="pf-row">
+            <div>I take shelter at</div>
+            <div>The <%= @user.family_name %> Family</div>
+        </div>
+        <div class="pf-row">
+            <div>They are located at</div>
+            <div><%= @user.address %></div>
+        </div>
+        <div class="pf-row">
+            <div>My Human's name is</div>
+            <div><%= @user.created_at %></div>
+        </div>
+        <div class="pf-row">
+            <div>I like to</div>
+            <div><%= @user.hobby %></div>
+        </div>
+        <div class="pf-row">
+            <div>And I love eating</div>
+            <div><%= @user.fav_food %></div>
+        </div>
+        <div class="pf-row">
+            <div>Member Since</div>
+            <div><%= @user.created_at %></div>
+        </div>
+      </div>
+    <div><%= link_to 'Delete Profile', users_path, method: :delete,
+            data: { confirm: 'Are you sure?' }%>
     </div>
+</div>
 
-    <div>
-    <%= @user.email %>
+<div id="user-posts">
+    <div id="sound-frame">
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
     </div>
-
-    <div>
-    Member Since: <%= @user.created_at %>
+    <div id="post-frame">
+        <div> Post 1
+        </div>
     </div>
-
-  </div>
+</div>
