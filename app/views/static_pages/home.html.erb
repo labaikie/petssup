@@ -1,28 +1,5 @@
 <div class="welcome">
 
-  <header>
-      <% if current_user %>
-    <div>
-      <%= link_to "View My Petfile", user_path(current_user) %>
-    </div>
-    <div>
-      <%= link_to "Sign Out", destroy_session_path %>
-    </div>
-      <% flash.each do |key,value| %>
-      <div class="<%= key %>"><%= value %></div>
-      <% end %>
-      <% else %>
-    <div id="join">
-      Join Us
-      <%= link_to "Join Us", new_user_path %>
-    </div>
-    <div>
-      Sign In
-      <%= link_to "Sign In", new_session_path %>
-    </div>
-      <% end %>
-  </header>
-
   <div id="logo">Site Name Here</div>
   <div class="main-msg">Lorem ipsum dolor sit amet, ex nihil saepe salutandi pri. Id volumus conclusionemque vel. Ut usu fugit insolens repudiandae, aeque audire percipit qui ex. Ei tale feugait dolores eum, errem ceteros ut sed. Eum id percipit interpretaris, sale alterum ceteros vim ei. No graece tempor sententiae eos, ea deserunt iracundia posidonium pro. Sea ignota disputationi ad, pro ei dicunt omittam, usu et diam vide constituto.</div>
 

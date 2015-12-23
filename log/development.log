@@ -30241,3 +30241,278 @@ AbstractController::ActionNotFound (The action 'index' could not be found for Po
   Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (115.0ms)
   [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", "2"]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+
+
+Started GET "/posts/new" for ::1 at 2015-12-22 20:02:52 -0800
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 41.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/targets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/users_new_login.self-5b39128b748fd60af003d387353320c54d03996f9d121a83e47d6fdf2eeff572.css?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/users_show.self-e8b22e6eb00c05b46184213aa47ac0cdd9409cb99c0f45a356c4fe30088e5dad.css?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/application.self-7c56f7457d6dc5d8462348b448bbf995e2094465252a6ea83b27598cfe568261.css?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/users.self-67cf71a9098f17977b708c11250eccedb91d8080ecbd1d868e6896f5429eba29.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-22 20:02:52 -0800
+
+
+Started GET "/" for ::1 at 2015-12-22 20:02:57 -0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sessions/destroy" for ::1 at 2015-12-22 20:03:10 -0800
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:03:10 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-22 20:03:52 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-12-22 20:03:58 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/new" for ::1 at 2015-12-22 20:04:08 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VvM89oXsYuuBOmhgPmDumiEvWPgB6V7wtMYvJMZmkgOnQXmnXQw9T5twlmX/QGjCDL8DwfrXtLwm25G7/6CXkQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (11.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 89ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:04:08 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:06:17 -0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:06:17 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:06:17 -0800
+
+
+Started GET "/assets/application.self-7c56f7457d6dc5d8462348b448bbf995e2094465252a6ea83b27598cfe568261.css?body=1" for ::1 at 2015-12-22 20:06:17 -0800
+
+
+Started GET "/assets/users_show.self-e8b22e6eb00c05b46184213aa47ac0cdd9409cb99c0f45a356c4fe30088e5dad.css?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/users_new_login.self-5b39128b748fd60af003d387353320c54d03996f9d121a83e47d6fdf2eeff572.css?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/targets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/users.self-67cf71a9098f17977b708c11250eccedb91d8080ecbd1d868e6896f5429eba29.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-22 20:06:18 -0800
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:06:59 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/targets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/users_new_login.self-5b39128b748fd60af003d387353320c54d03996f9d121a83e47d6fdf2eeff572.css?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/users_show.self-e8b22e6eb00c05b46184213aa47ac0cdd9409cb99c0f45a356c4fe30088e5dad.css?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/application.self-7c56f7457d6dc5d8462348b448bbf995e2094465252a6ea83b27598cfe568261.css?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/users.self-67cf71a9098f17977b708c11250eccedb91d8080ecbd1d868e6896f5429eba29.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-22 20:06:59 -0800
+
+
+Started GET "/sessions/destroy" for ::1 at 2015-12-22 20:07:14 -0800
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:07:14 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-12-22 20:07:21 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-12-22 20:07:32 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/new" for ::1 at 2015-12-22 20:07:41 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF23apLh5t6siK83g4l9DseJ3DaQTV/pKsjwcXFWG6T17/I7SgG5erbCUTJCqftW6hmHD2tztaW41U7uSJAeNg==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 75ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:07:41 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/destroy" for ::1 at 2015-12-22 20:08:04 -0800
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:08:04 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-12-22 20:08:14 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/new" for ::1 at 2015-12-22 20:08:36 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IGvnkP1RhyougSZ6vVGu+SCp0OaS7RMSJOX93/WxlyTR2aLBJbHYjjTL2H98cSihDTmL32nT+V62+ENAzHeStg==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 72ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-12-22 20:08:36 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.2ms)
