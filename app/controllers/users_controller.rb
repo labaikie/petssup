@@ -21,13 +21,42 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update_atrributes(profile_params)
+      redirect_to user_path(@user)
+    else
+      render :show
+    end
+  end
+
   private
+
   def user_params
     params.require(:user).permit(
       :email,
       :name,
       :password,
-      :password_confirmation
+      :password_confirmation,
     )
   end
+
+  def profile_params
+    params.require(:user).permit(
+        :name,
+        :email,
+        :password,
+        :password_confirmation,
+        :family_name,
+        :animal_type,
+        :gender,
+        :birthday,
+        :human_name,
+        :address,
+        :profile_img,
+        :hobby,
+        :fav_food
+      )
+  end
+
 end
