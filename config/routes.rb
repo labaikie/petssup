@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show', as: :user
   patch 'users/:id' => 'users#update'
 
+  get 'users/edit/:id' => 'users#edit', as: :edit_user
+
   get 'sessions/new' => 'sessions#new', as: :new_session
   post 'sessions/new' => 'sessions#create', as: :create_session
 

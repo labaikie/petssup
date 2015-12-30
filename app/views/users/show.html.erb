@@ -49,10 +49,9 @@
             <div><%= @user.created_at %></div>
         </div>
       </div>
-      <%= render "users/edit" %>
-    <div class="btn btn-default" id="edit-user">Edit Profile</div>
+    <div class="btn btn-default" id="edit-user"><%= link_to 'Edit Profile', edit_user_path %></div>
     <div class="btn btn-danger"><%= link_to 'Delete Profile', users_path, method: :delete,
-            data: { confirm: 'Are you sure?' }%>
+            data: { confirm: 'Are you sure that you want to delete your profile?' }%>
     </div>
 
 </div>

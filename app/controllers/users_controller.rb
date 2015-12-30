@@ -21,9 +21,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def update
     @user = User.find(params[:id])
-    if @user.update_atrributes(profile_params)
+    if @user.update_attributes(profile_params)
       redirect_to user_path(@user)
     else
       render :show
@@ -56,7 +60,7 @@ class UsersController < ApplicationController
         :profile_img,
         :hobby,
         :fav_food
-      )
+    )
   end
 
 end

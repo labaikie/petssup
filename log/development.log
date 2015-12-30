@@ -34354,3 +34354,528 @@ Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702
 
 
 Started GET "/assets/default-profile-img-b086ffe0502034dba6760ee9befb4146927e70e1e2bd66f3d5da50ca5b35f9f4.png" for ::1 at 2015-12-23 19:06:19 -0800
+
+
+Started GET "/sessions/destroy" for ::1 at 2015-12-25 17:27:11 -0800
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-25 17:27:11 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 191ms (Views: 189.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-25 17:27:23 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/users_new_login.self-330228563119a43b7440efe5f10fdebfc69699f2bad7f8012418a314353de65b.css?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/users_show.self-cc82f6fbe2c3720afe987002d276daa47fea6031b776772f27a4a595d15f601d.css?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/application.self-cfa0307cabca210afb70a77998827761f7776a5e64ac86e7941cb06f986039a0.css?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/assets/users.self-30fdb7e6e595ef0d33cff2d7a24078140d0c0aaebc3c0fbaa2811308ae77ccda.js?body=1" for ::1 at 2015-12-25 17:27:23 -0800
+
+
+Started GET "/sessions/new" for ::1 at 2015-12-25 17:27:31 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (469.9ms)
+Completed 200 OK in 581ms (Views: 508.4ms | ActiveRecord: 53.9ms)
+
+
+Started POST "/sessions/new" for ::1 at 2015-12-25 17:28:24 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgPYFhmj/bNuagFcQJJfRF77pVmI3O/8QVzZvP7WkvHDsZ1HwUOiF3Qg/1mBstkcc2v+YHPiBbDTQWcjxxCXYw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (9.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 106ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-12-25 17:28:24 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/sessions/new" for ::1 at 2015-12-25 17:29:33 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sfBZyYlr1jLVzME5iOJb1/tiD1SdJwGkDdt5NA4Fpc1AQhyYUYuJls+GPzxJwt2P1vJUbWYZ6+ifxserN8OgXw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 74ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-12-25 17:29:33 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for ::1 at 2015-12-25 17:29:42 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_edit.html.erb (0.2ms)
+  Rendered users/show.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for ::1 at 2015-12-25 17:50:51 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 96ms (Views: 70.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/users_new_login.self-330228563119a43b7440efe5f10fdebfc69699f2bad7f8012418a314353de65b.css?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/application.self-cfa0307cabca210afb70a77998827761f7776a5e64ac86e7941cb06f986039a0.css?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/users_show.self-cc82f6fbe2c3720afe987002d276daa47fea6031b776772f27a4a595d15f601d.css?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/users.self-30fdb7e6e595ef0d33cff2d7a24078140d0c0aaebc3c0fbaa2811308ae77ccda.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/assets/default-profile-img-b086ffe0502034dba6760ee9befb4146927e70e1e2bd66f3d5da50ca5b35f9f4.png" for ::1 at 2015-12-25 17:50:51 -0800
+
+
+Started GET "/users/2" for ::1 at 2015-12-25 17:52:59 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (29.5ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined local variable or method `edit_user' for #<#<Class:0x007fe7134726e0>:0x007fe713a76708>):
+    49:             <div><%= @user.created_at %></div>
+    50:         </div>
+    51:       </div>
+    52:     <div class="btn btn-default" id="edit-user"><%= link_to 'Edit Profile', edit_user %></div>
+    53:     <div class="btn btn-danger"><%= link_to 'Delete Profile', users_path, method: :delete,
+    54:             data: { confirm: 'Are you sure that you want to delete your profile?' }%>
+    55:     </div>
+  app/views/users/show.html.erb:52:in `_app_views_users_show_html_erb___3540736461176357718_70315221952300'
+
+
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.4ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.2ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (170.8ms)
+
+
+Started GET "/users/2" for ::1 at 2015-12-25 17:53:15 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/users_new_login.self-330228563119a43b7440efe5f10fdebfc69699f2bad7f8012418a314353de65b.css?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/users_show.self-cc82f6fbe2c3720afe987002d276daa47fea6031b776772f27a4a595d15f601d.css?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/application.self-cfa0307cabca210afb70a77998827761f7776a5e64ac86e7941cb06f986039a0.css?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/users.self-30fdb7e6e595ef0d33cff2d7a24078140d0c0aaebc3c0fbaa2811308ae77ccda.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/assets/default-profile-img-b086ffe0502034dba6760ee9befb4146927e70e1e2bd66f3d5da50ca5b35f9f4.png" for ::1 at 2015-12-25 17:53:15 -0800
+
+
+Started GET "/users/edit/2" for ::1 at 2015-12-25 17:53:17 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit/2" for ::1 at 2015-12-25 17:53:51 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/edit.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/users_new_login.self-330228563119a43b7440efe5f10fdebfc69699f2bad7f8012418a314353de65b.css?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/users_show.self-e8b22e6eb00c05b46184213aa47ac0cdd9409cb99c0f45a356c4fe30088e5dad.css?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/application.self-0a0e0088021179f2c0286f0a4e3e389a91bc2a705c7582cd294349e57fb7ed92.css?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/users.self-30fdb7e6e595ef0d33cff2d7a24078140d0c0aaebc3c0fbaa2811308ae77ccda.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-12-25 17:53:51 -0800
+
+
+Started PATCH "/users/2" for ::1 at 2015-12-25 17:55:00 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GXsjlxf1JBN50O0yzU9V4QleS2Qr1k8iV3MCRV+lzPLoyWbGzxV7t2OaEzcMb9O5JM4QXdDopW7FbrzaZmPJYA==", "user"=>{"name"=>"Ziola", "email"=>"test@test.com", "password"=>"[FILTERED]", "family_name"=>"Oh", "birthday"=>"January 21, 2000", "gender"=>"Female", "address"=>"Seoul, Korea", "human_name"=>"June", "hobby"=>"Hiding", "fav_food"=>"None", "profile_img"=>"default-profile-img.png"}, "commit"=>"Save changes", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `update_atrributes' for #<User:0x007fe714d33698>):
+  app/controllers/users_controller.rb:30:in `update'
+
+
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.3ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.8ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/laski/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (124.5ms)
+
+
+Started PATCH "/users/2" for ::1 at 2015-12-30 15:48:56 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GXsjlxf1JBN50O0yzU9V4QleS2Qr1k8iV3MCRV+lzPLoyWbGzxV7t2OaEzcMb9O5JM4QXdDopW7FbrzaZmPJYA==", "user"=>{"name"=>"Ziola", "email"=>"test@test.com", "password"=>"[FILTERED]", "family_name"=>"Oh", "birthday"=>"January 21, 2000", "gender"=>"Female", "address"=>"Seoul, Korea", "human_name"=>"June", "hobby"=>"Hiding", "fav_food"=>"None", "profile_img"=>"default-profile-img.png"}, "commit"=>"Save changes", "id"=>"2"}
+  [1m[35mUser Load (11.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (31.4ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('test@test.com') AND "users"."id" != 2) LIMIT 1
+  [1m[36mSQL (25.2ms)[0m  [1mUPDATE "users" SET "password_digest" = $1, "family_name" = $2, "gender" = $3, "birthday" = $4, "human_name" = $5, "hobby" = $6, "fav_food" = $7, "updated_at" = $8 WHERE "users"."id" = $9[0m  [["password_digest", "$2a$10$Mqs77mDPGERnh7PotpIZ1OkvSgdYpCELqOD9yRmI/lzjjHhgPIA8C"], ["family_name", "Oh"], ["gender", "Female"], ["birthday", "2000-01-21"], ["human_name", "June"], ["hobby", "Hiding"], ["fav_food", "None"], ["updated_at", "2015-12-30 23:48:57.379842"], ["id", 2]]
+  [1m[35m (2.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 444ms (ActiveRecord: 175.6ms)
+
+
+Started GET "/users/2" for ::1 at 2015-12-30 15:48:57 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 173ms (Views: 169.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/application.self-0a0e0088021179f2c0286f0a4e3e389a91bc2a705c7582cd294349e57fb7ed92.css?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/users_show.self-e8b22e6eb00c05b46184213aa47ac0cdd9409cb99c0f45a356c4fe30088e5dad.css?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/users_new_login.self-330228563119a43b7440efe5f10fdebfc69699f2bad7f8012418a314353de65b.css?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/users.self-30fdb7e6e595ef0d33cff2d7a24078140d0c0aaebc3c0fbaa2811308ae77ccda.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/assets/default-profile-img-b086ffe0502034dba6760ee9befb4146927e70e1e2bd66f3d5da50ca5b35f9f4.png" for ::1 at 2015-12-30 15:48:57 -0800
+
+
+Started GET "/users/edit/2" for ::1 at 2015-12-30 15:49:02 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/2" for ::1 at 2015-12-30 15:49:36 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lwJSTFiskl7tmFKd1ydDqWG9LJNuD9DRh3EBx7fWxzFmsBcdgEzN+vfSrJgWB8XxTC13qpUxOp0VbL9YjhDCow==", "user"=>{"name"=>"Ziola", "email"=>"test@test.com", "password"=>"[FILTERED]", "family_name"=>"Oh", "birthday"=>"2000-01-21", "gender"=>"Female", "address"=>"Seoul, Korea", "human_name"=>"June", "hobby"=>"Hiding", "fav_food"=>"None", "profile_img"=>"default-profile-img.png"}, "commit"=>"Save changes", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('test@test.com') AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["password_digest", "$2a$10$bEZpu/tzPqORJARruPL3WuLzwn6mOZg025CIBw1H2SBrfgmbPFivu"], ["updated_at", "2015-12-30 23:49:36.928436"], ["id", 2]]
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 79ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/users/2" for ::1 at 2015-12-30 15:49:36 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit/2" for ::1 at 2015-12-30 15:49:48 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/2" for ::1 at 2015-12-30 15:49:57 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHO/U6Fb7kQZyF2i4wF16zAMbxXTJGFEFjMkqEfmQb/JwfoCebux4AOCo6ciIfOzHZw0LCgaiwiELpo3fiBELQ==", "user"=>{"name"=>"Ziola", "email"=>"test@test.com", "password"=>"[FILTERED]", "family_name"=>"Oh", "birthday"=>"2000-01-21", "gender"=>"Female", "address"=>"Seoul, Korea", "human_name"=>"June", "hobby"=>"Hiding", "fav_food"=>"None", "profile_img"=>"default-profile-img.png"}, "commit"=>"Save changes", "id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('test@test.com') AND "users"."id" != 2) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 72ms (Views: 62.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/users/2" for ::1 at 2015-12-30 15:50:56 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHO/U6Fb7kQZyF2i4wF16zAMbxXTJGFEFjMkqEfmQb/JwfoCebux4AOCo6ciIfOzHZw0LCgaiwiELpo3fiBELQ==", "user"=>{"name"=>"Ziola", "email"=>"test@test.com", "password"=>"[FILTERED]", "family_name"=>"Oh", "birthday"=>"2000-01-21", "gender"=>"Female", "address"=>"Seoul, Korea", "human_name"=>"June", "hobby"=>"Hiding", "fav_food"=>"None", "profile_img"=>"default-profile-img.png"}, "commit"=>"Save changes", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('test@test.com') AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 43ms (Views: 32.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/users.self-698454b3fc0b392317b9fdfb170c8c7a26c9e780afaf55b6205142694b5bf6de.css?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/users_show.self-e8b22e6eb00c05b46184213aa47ac0cdd9409cb99c0f45a356c4fe30088e5dad.css?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/users_new_login.self-330228563119a43b7440efe5f10fdebfc69699f2bad7f8012418a314353de65b.css?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/application.self-0a0e0088021179f2c0286f0a4e3e389a91bc2a705c7582cd294349e57fb7ed92.css?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-30 15:50:56 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-30 15:50:57 -0800
+
+
+Started GET "/assets/targets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-30 15:50:57 -0800
+
+
+Started GET "/assets/users.self-30fdb7e6e595ef0d33cff2d7a24078140d0c0aaebc3c0fbaa2811308ae77ccda.js?body=1" for ::1 at 2015-12-30 15:50:57 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-12-30 15:50:57 -0800
+
+
+Started GET "/assets/default-profile-img-b086ffe0502034dba6760ee9befb4146927e70e1e2bd66f3d5da50ca5b35f9f4.png" for ::1 at 2015-12-30 15:50:57 -0800
+
+
+Started GET "/users/edit/2" for ::1 at 2015-12-30 15:51:11 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/2" for ::1 at 2015-12-30 15:51:14 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fFQ5rOrrr6ZPASUsaLFPD6m/vMzGPnItzrgLYBl1OxON5nz9MgvwAlVL2ympkclXhC/n9T0AmGFcpbX/ILM+gQ==", "user"=>{"name"=>"Ziola", "email"=>"test@test.com", "password"=>"[FILTERED]", "animal_type"=>"", "family_name"=>"Oh", "birthday"=>"2000-01-21", "gender"=>"Female", "address"=>"Seoul, Korea", "human_name"=>"June", "hobby"=>"Hiding", "fav_food"=>"None", "profile_img"=>"default-profile-img.png"}, "commit"=>"Save changes", "id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('test@test.com') AND "users"."id" != 2) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 0.9ms)
