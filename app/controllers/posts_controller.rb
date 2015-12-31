@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def create
     if Post.new(post_params).save
       flash[:success] = "You have posted!"
-      redirect_to posts_path
+      redirect_to user_path
     else
       flash[:error] = "Posting was unsuccessful"
       redirect_to new_post_path

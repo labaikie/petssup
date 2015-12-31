@@ -7,6 +7,10 @@
 $('#edit-user').click(displayEdit);
 
 function displayEdit(){
-  return $('#show-profile').css("display","none");
-  return $('#edit-profile').css("display","block");
+  $('#show-profile').css("display","none");
+  $('#edit-profile').css("display","block");
 }
+
+// function renderPost(){
+
+// }

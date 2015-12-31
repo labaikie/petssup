@@ -53,24 +53,31 @@
     <div class="btn btn-danger"><%= link_to 'Delete Profile', users_path, method: :delete,
             data: { confirm: 'Are you sure that you want to delete your profile?' }%>
     </div>
+</div>
 
+<div id="user-sounds">
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
 </div>
 
 <div id="user-posts">
-    <div id="sound-frame">
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-        </tr>
-    </div>
-    <div id="post-frame">
-        <div> Post 1
+    <div class="row"><%= link_to 'Create Post', new_post_path %></div>
+    <div class="row">
+        <% @posts.each do |post| %>
+        <div class="post">
+            <div class="post-body"><%= post.body %></div>
+            <div class="post-image"><%= image_tag post.img_url %></div>
+            <div class="post-time"><%= post.created_at %></div>
         </div>
+        <% end %>
     </div>
+    <div class="row"></div>
 </div>
