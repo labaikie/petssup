@@ -22,11 +22,14 @@ footer {
 }
 
 footer div {
-  width: auto;
-  float: right;
+  margin: 0 15px;
+  display: inline-block;
+  font-family: $logo-font;
+  font-size: 30px;
 }
 
 .accent {
   font-family: $accent-font1;
   font-size: 40px;
 }
+
