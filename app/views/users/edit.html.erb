@@ -1,16 +1,18 @@
 <div id="edit-profile">
+
   <%= form_for(@user) do |f| %>
+
   <div class="pf-row">
-      <div>Name</div>
-      <div><%= f.text_field :name, class: 'form-control' %></div>
+      <div>Confirm Password</div>
+      <div><%= f.text_field :password, class: 'form-control' %></div>
   </div>
   <div class="pf-row">
       <div>Email</div>
       <div><%= f.text_field :email, class: 'form-control' %></div>
   </div>
   <div class="pf-row">
-      <div>Password</div>
-      <div><%= f.text_field :password, class: 'form-control' %></div>
+      <div>Name</div>
+      <div><%= f.text_field :name, class: 'form-control' %></div>
   </div>
   <div class="pf-row">
       <div>Animal Type</div>
@@ -51,5 +53,7 @@
   <div class="pf-row">
     <%= f.submit "Save changes", class: "btn btn-primary" %>
   </div>
+
   <% end %>
+
 </div>

@@ -32,8 +32,14 @@ class UsersController < ApplicationController
     if @user.update_attributes(profile_params)
       redirect_to user_path(@user)
     else
-      render :show
+      render :edit
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path
   end
 
   private
@@ -52,7 +58,6 @@ class UsersController < ApplicationController
         :name,
         :email,
         :password,
-        :password_confirmation,
         :family_name,
         :animal_type,
         :gender,
