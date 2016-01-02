@@ -1,75 +1,35 @@
-<div id="profile">
+<div id="user-profile">
+
     <div class="accent">A little about <%= @user.name %></div>
     <div><%= image_tag @user.profile_img,
         width: 300, height: 300, class: 'img-circle profile-img' %>
     </div>
-    <div id="show-profile">
-        <div class="pf-row">
-        </div>
-        <div class="pf-row">
-            <div>Name</div>
-            <div><%= @user.name %></div>
-        </div>
-        <div class="pf-row">
-            <div>I'm a</div>
-            <div><%= @user.animal_type %></div>
-        </div>
-        <div class="pf-row">
-            <div>Gender</div>
-            <div><%= @user.gender %></div>
-        </div>
-        <div class="pf-row">
-            <div>Age</div>
-            <div><%= @age %></div>
-        </div>
-        <div class="pf-row">
-            <div>I take shelter at</div>
-            <div>The <%= @user.family_name %> Family</div>
-        </div>
-        <div class="pf-row">
-            <div>They are located at</div>
-            <div><%= @user.address %></div>
-        </div>
-        <div class="pf-row">
-            <div>My Human's name is</div>
-            <div><%= @user.human_name %></div>
-        </div>
-        <div class="pf-row">
-            <div>The email I borrow is</div>
-            <div><%= @user.email %></div>
-        </div>
-        <div class="pf-row">
-            <div>I like</div>
-            <div><%= @user.hobby %></div>
-        </div>
-        <div class="pf-row">
-            <div>And I love to eat</div>
-            <div><%= @user.fav_food %></div>
-        </div>
-        <div class="pf-row">
-            <div>Member Since</div>
-            <div><%= @user.created_at %></div>
-        </div>
-      </div>
-    <div class="btn btn-default" id="edit-user"><%= link_to 'Edit Profile', edit_user_path %></div>
-    <div class="btn btn-danger"><%= link_to 'Delete Profile', users_path, method: :delete,
-            data: { confirm: 'Are you sure that you want to delete your profile?' }%>
+    <%= render 'show_profile' %>
+    <%= render 'edit_profile' %>
+</div>
+
+<div id="user-content">
+    <div class="accent"><%= @user.name %>'s Voice</div>
+    <div id="user-sounds">
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
     </div>
-</div>
 
-<div id="user-posts">
-    <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-    </tr>
-    <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>94</td>
-    </tr>
-</div>
+    <div class="accent"><%= @user.name %>'s Posts</div>
+    <div id="user-posts">
+        <div class="buttons">
+            <%= link_to 'Create Post', new_post_path, class: 'btn btn-default' %>
+        </div>
+        <%= render @posts %>
+    </div>
 
-<div class="row"><%= link_to 'Create Post', new_post_path %></div>
-<%= render @posts %>
+</div>
 

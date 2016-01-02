@@ -1,29 +1,42 @@
-#profile, #user-posts, #edit-profile {
+#user-profile, #user-content {
   border: black 1px solid;
+  border-radius: 10px;
   float: left;
   margin-top: 50px;
 }
 
-#profile {
+#user-profile {
   width: 30%;
 }
 
-#user-posts {
+#user-content {
   width: 70%;
 }
 
-#profile > div, #user-posts > div {
-  margin: 15px;
+#user-profile > div, #user-content > div {
+  margin: 15px 25px;
 }
 
 .profile-img {
   margin: 0 45px;
 }
 
-
 .pf-row div {
   float: left;
   width: 50%;
   height: 28px;
-  border: 1px solid black;
+}
+
+.buttons {
+  display: inline-block;
+  width: 100%;
+}
+
+.buttons > div, .buttons > input {
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+#edit-profile {
+  margin-top: 50px;
 }
