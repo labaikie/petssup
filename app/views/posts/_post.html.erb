@@ -1,0 +1,8 @@
+<div class="post">
+  <div class="row">
+    <div class="post-user"><%= link_to post.user.name, post.user %></div>
+    <div class="post-body"><%= post.body %></div>
+    <div class="post-image"><%= image_tag post.img_url %></div>
+    <div class="post-time">Posted <%= time_ago_in_words(post.created_at) %> ago.</div>
+  </div>
+</div>

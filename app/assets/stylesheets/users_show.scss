@@ -1,27 +1,29 @@
 #profile, #user-posts {
   border: black 1px solid;
   float: left;
+  margin-top: 50px;
 }
 
 #profile {
   width: 30%;
 }
 
+#user-posts {
+  width: 70%;
+}
+
 #profile > div, #user-posts > div {
   margin: 15px;
 }
 
-#user-posts {
-  width: 70%;
+.profile-img {
+  margin: 0 45px;
 }
+
 
 .pf-row div {
   float: left;
   width: 50%;
   height: 28px;
   border: 1px solid black;
-}
-
-.img-circle {
-  padding: 0 auto;
 }

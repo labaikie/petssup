@@ -5,8 +5,9 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: { case_sensitive: false}, format: { with: VALID_EMAIL_REGEX }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
-  has_many :friendships
-  has_many :posts
+  has_many :friendships, dependent: :destroy
+  has_many :posts, dependent: :destroy
   has_many :friends, through: :friendships
+  has_many :sounds, dependent: :destroy
 
 end

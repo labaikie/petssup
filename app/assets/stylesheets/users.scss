@@ -7,10 +7,6 @@ $main-font: 'Rokkitt', serif;
 
 /*COLORS*/
 
-.content {
-  background-color: green;
-}
-
 header {
   position: fixed;
   bottom: auto;
@@ -36,8 +32,8 @@ header div {
 #logo {
   margin: 37% 10% 0 10%;
   font-family: $logo-font;
-  font-size: 120px;
-  border: 1px black solid;
+  font-size: 150px;
+  color: black;
 }
 
 .main-msg {

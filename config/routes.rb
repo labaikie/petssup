@@ -20,6 +20,6 @@ Rails.application.routes.draw do
 
   get 'targets/' => 'targets#index', as: :targets
 
-  resources :posts
+  resources :posts, only: [:create, :destroy, :new]
 
 end

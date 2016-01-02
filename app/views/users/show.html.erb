@@ -1,16 +1,14 @@
 <div id="profile">
-    <div class="accent">Hello, <%= @user.name %>!</div>
-    <%= image_tag @user.profile_img, class: 'img-circle' %>
-      <div id="show-profile">
+    <div class="accent">A little about <%= @user.name %></div>
+    <div><%= image_tag @user.profile_img,
+        width: 300, height: 300, class: 'img-circle profile-img' %>
+    </div>
+    <div id="show-profile">
         <div class="pf-row">
         </div>
         <div class="pf-row">
-            <div>Email</div>
-            <div><%= @user.email %></div>
-        </div>
-        <div class="pf-row">
-            <div>Password</div>
-            <div><%= @user.password %></div>
+            <div>Name</div>
+            <div><%= @user.name %></div>
         </div>
         <div class="pf-row">
             <div>I'm a</div>
@@ -34,7 +32,11 @@
         </div>
         <div class="pf-row">
             <div>My Human's name is</div>
-            <div><%= @user.created_at %></div>
+            <div><%= @user.human_name %></div>
+        </div>
+        <div class="pf-row">
+            <div>The Human's Email is</div>
+            <div><%= @user.email %></div>
         </div>
         <div class="pf-row">
             <div>I like to</div>
@@ -55,7 +57,7 @@
     </div>
 </div>
 
-<div id="user-sounds">
+<div id="user-posts">
     <tr>
         <td>Jill</td>
         <td>Smith</td>
@@ -68,16 +70,6 @@
     </tr>
 </div>
 
-<div id="user-posts">
-    <div class="row"><%= link_to 'Create Post', new_post_path %></div>
-    <div class="row">
-        <% @posts.each do |post| %>
-        <div class="post">
-            <div class="post-body"><%= post.body %></div>
-            <div class="post-image"><%= image_tag post.img_url %></div>
-            <div class="post-time"><%= post.created_at %></div>
-        </div>
-        <% end %>
-    </div>
-    <div class="row"></div>
-</div>
+<div class="row"><%= link_to 'Create Post', new_post_path %></div>
+<%= render @posts %>
+

@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
+  before_action :current_user, only: [:create, :destroy, :new]
 
   def new
     @post = Post.new
   end
 
   def create
-    if Post.new(post_params).save
+    @post = current_user.posts.build(post_params)
+    if @post.save
       flash[:success] = "You have posted!"
       redirect_to user_path
     else
