@@ -30,6 +30,11 @@
 .buttons {
   display: inline-block;
   width: 100%;
+  margin-bottom: 15px;
+}
+
+#btn-to-header {
+ float: right;
 }
 
 .buttons > div, .buttons > input {

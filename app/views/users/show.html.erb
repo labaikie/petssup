@@ -6,28 +6,28 @@
     </div>
     <%= render 'show_profile' %>
     <%= render 'edit_profile' %>
+
 </div>
 
 <div id="user-content">
-    <div class="accent"><%= @user.name %>'s Voice</div>
+
+    <div class="section-header">
+        <div class="accent"><%= @user.name %>'s Voice</div>
+        <div class="buttons" id="btn-to-header">
+        <%= link_to 'Add Sound', new_sound_path, class: 'btn btn-default' %>
+        </div>
+    </div>
     <div id="user-sounds">
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-        </tr>
+        <%= render @sounds %>
     </div>
 
-    <div class="accent"><%= @user.name %>'s Posts</div>
-    <div id="user-posts">
-        <div class="buttons">
-            <%= link_to 'Create Post', new_post_path, class: 'btn btn-default' %>
+    <div class="section-header">
+        <div class="accent"><%= @user.name %>'s Posts</div>
+        <div class="buttons" id="btn-to-header">
+        <%= link_to 'Create Post', new_post_path, class: 'btn btn-default' %>
         </div>
+    </div>
+    <div id="user-posts">
         <%= render @posts %>
     </div>
 

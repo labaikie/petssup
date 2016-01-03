@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   get 'targets/' => 'targets#index', as: :targets
 
-  resources :posts, only: [:create, :destroy, :new]
+  resources :posts, only: [:create, :edit, :destroy, :new]
+  patch 'posts/:id' => 'posts#update'
+
+  resources :sounds, only: [:create, :edit, :destroy, :new]
+  patch 'sounds/:id' => 'sounds#update'
 
 end

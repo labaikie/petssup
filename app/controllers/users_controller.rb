@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
+    @sounds = @user.sounds
   end
 
   def new
@@ -29,6 +30,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @posts = @user.posts
+    @sounds = @user.sounds
     if @user.update_attributes(profile_params)
       redirect_to user_path(@user)
     else
