@@ -46,10 +46,10 @@
   </div>
   <div class="buttons">
     <div class="btn btn-default" id="edit-profile-btn">
-      <%= link_to 'Edit Profile', edit_user_path %>
+      Edit Profile
     </div>
     <div class="btn btn-danger">
-      <%= link_to 'Delete Profile', users_path, method: :delete,
+      <%= link_to 'Delete Profile', @user, method: :delete,
           data: { confirm: 'Are you sure that you want to delete your profile?' }%>
     </div>
   </div>

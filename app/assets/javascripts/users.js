@@ -4,13 +4,19 @@
 //   $('#joinDp').css("display", "block");
 // }
 
-$('#edit-user').click(displayEdit);
+$(function(){
 
-function displayEdit(){
-  $('#show-profile').css("display","none");
-  $('#edit-profile').css("display","block");
+$('#edit-profile-btn').click(function(){
+  hideAndShow('#show-profile','#edit-profile')
+});
+
+$('#edit-post-btn').click(function(){
+  hideAndshow('#edit-profile','#show-profile')
+});
+
+function hideAndShow(hide, show) {
+  $(hide).css('display', 'none');
+  $(show).css('display', 'block')
 }
 
-// function renderPost(){
-
-// }
+})

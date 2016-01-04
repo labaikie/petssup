@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
     @user = current_user
+    @users = User.all
     @populars = Post.all.limit(4) # edit to popular posts later
   end
 
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def create
     if User.new(user_params).save
       flash[:success] = "You are now registered!"
-      redirect_to users_path
+      redirect_to root_path
     else
       flash[:error] = "Registration was unsuccessful"
       redirect_to new_user_path
@@ -36,14 +36,14 @@ class UsersController < ApplicationController
     if @user.update_attributes(profile_params)
       redirect_to user_path(@user)
     else
-      render :edit
+      render :show
     end
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to root_path
+    redirect_to destroy_session_path
   end
 
   private
