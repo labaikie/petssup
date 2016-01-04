@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+    @user = current_user
+    @populars = Post.all.limit(4) # edit to popular posts later
   end
 
   def show

@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def home
-    @random = Post.all.sample.img_url
+    @random = User.all.sample.profile_img
   end
 
 end
