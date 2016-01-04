@@ -1,9 +1,9 @@
 <div class="post">
     <div class="post-header">
       <%= image_tag post.user.profile_img,
-        width: 45, height: 45, class: 'img-circle user-icon' %>
+        class: 'img-circle user-icon' %>
       <span class="post-user">
-        <%= link_to post.user.name, post.user %> of the <%= post.user.family_name %> family
+        <%= link_to post.user.name, users_path(post.user) %> of the <%= post.user.family_name %> family
       </span>
       <span class="post-time">
         Posted <%= time_ago_in_words(post.created_at) %> ago
