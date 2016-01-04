@@ -2,7 +2,7 @@
 
     <div class="accent">A little about <%= @user.name %></div>
     <div><%= image_tag @user.profile_img,
-        width: 300, height: 300, class: 'img-circle profile-img' %>
+        class: 'img-circle profile-img center-block' %>
     </div>
     <%= render 'show_profile' %>
     <%= render 'edit_profile' %>

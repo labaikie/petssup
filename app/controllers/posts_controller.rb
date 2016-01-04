@@ -38,8 +38,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(
       :body,
       :img_url,
-      :video_url,
-      :user_id
+      :video_url
     )
   end
 

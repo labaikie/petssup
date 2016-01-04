@@ -1,12 +1,11 @@
 <div id="main-header">
   <div class="accent"><%= @user.name %> of the <%= @user.family_name %> family</div>
-  <div><%= image_tag @user.profile_img,
-          width: 300,
-          height: 300,
-          class: 'img-circle profile-img' %>
-  </div>
-  <div class="buttons">
-    <div class="btn btn-default"><%= link_to "Post", new_post_path %></div>
+  <div>
+    <%= image_tag @user.profile_img,
+          class: 'img-circle profile-img center-block' %>
+    <div class="buttons">
+      <div class="btn btn-default"><%= link_to "Post", new_post_path %></div>
+    </div>
   </div>
 </div>
 
