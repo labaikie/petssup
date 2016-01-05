@@ -27,5 +27,8 @@ Rails.application.routes.draw do
   resources :sounds, only: [:create, :edit, :destroy, :new]
   patch 'sounds/:id' => 'sounds#update'
 
+  namespace :api do
+    resources :posts, only: [:index, :show]
+  end
 
 end
