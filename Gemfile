@@ -7,7 +7,7 @@ gem 'pry'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'font-awesome-sass'
 gem 'httparty'
 # Use postgresql as the database for Active Record
@@ -52,3 +52,4 @@ group :development do
   # gem 'spring'
 end
 
+ruby "2.2.0"
