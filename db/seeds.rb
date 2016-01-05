@@ -23,7 +23,7 @@ ziola = User.create(
   gender: "male",
   human_name: "June",
   address: "Suwon, Korea",
-  profile_img: "cotton-profile-img.jpg"
+  profile_img: "ziola-profile-img.jpg"
   )
 
 latte = User.create(
@@ -36,5 +36,5 @@ latte = User.create(
   gender: "female",
   human_name: "Eunmi",
   address: "Pangyo, Korea",
-  profile_img: "cotton-profile-img.jpg"
+  profile_img: "latte-profile-img.jpg"
   )
