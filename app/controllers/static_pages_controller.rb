@@ -6,11 +6,11 @@ class StaticPagesController < ApplicationController
 
   def grab_random
     @sample = User.all.sample.profile_img
-    if @sample != "default-profile-img.png"
+    # if @sample != "default-profile-img.png"
       return @sample
-    else
-      grab_random
-    end
+    # else
+    #   grab_random
+    # end
   end
 
 end
