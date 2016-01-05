@@ -12,9 +12,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def update
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    @comment.update_attributes(comment_params)
+  end
+
   def destroy
     @post = Post.find(params[:post_id])
-    @comment = Comment.find(params[:id]).destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
     redirect_to user_path(@post.user)
   end
 

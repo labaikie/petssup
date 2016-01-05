@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:create, :edit, :destroy, :new]
   patch 'posts/:id' => 'posts#update'
   resources :posts do
-    resources :comments, only: [:show, :create, :destroy]
+    resources :comments, only: [:show, :create, :destroy, :update]
   end
 
   resources :sounds, only: [:create, :edit, :destroy, :new]
