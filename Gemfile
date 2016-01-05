@@ -9,6 +9,7 @@ gem 'pry'
 gem 'rails', '4.2.5'
 gem 'rails_12factor'
 gem 'font-awesome-sass'
+gem 'httparty'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
