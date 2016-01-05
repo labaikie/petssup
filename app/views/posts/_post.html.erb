@@ -20,8 +20,11 @@
         class: "post-video"
     %>
     <% end %>
-    <% if current_user == post.user %>
     <div class="buttons">
+      <div class="btn btn-default", id="comments-btn">
+        Comments
+      </div>
+    <% if current_user == post.user %>
       <div class="btn btn-default">
         <%= link_to 'Edit', edit_post_path(post.id) %>
       </div>
@@ -29,6 +32,24 @@
         <%= link_to "Delete", post, method: :delete,
             data: { confirm: "You sure?" } %>
       </div>
-    </div>
     <% end %>
+    </div>
+    <div class="comments">
+      <div class="show-comments">
+      <% post.comments.each do |comment| %>
+        <div class="comment">
+          <div><%= comment.user.name %></div>
+          <div><%= comment.body %></div>
+          <span id="delete-comment"><%= link_to "Delete", "posts/#{post.id}/comments/#{comment.id}", method: :delete %></span>
+          <span id="edit-comment">Edit</span>
+        </div>
+      <% end %>
+      </div>
+      <div class="add-comment">
+        <%= form_for Comment.new, :url => post_comments_path(post) do |f| %>
+        <%= f.text_field :body, :placeholder => "Comment Here", class: "form-field" %>
+        <%= f.submit "Comment", class: "btn btn-success", id: "new-post-btn" %>
+        <% end %>
+      </div>
+    </div>
 </div>

@@ -13,23 +13,5 @@
   <div class="content-header">
     Here are some posts that are trending
   </div>
-  <% @populars.each do |post| %>
-    <div class="post">
-      <div class="post-header">
-        <%= image_tag post.user.profile_img,
-          width: 45, height: 45, class: 'img-circle user-icon' %>
-        <span class="post-user">
-          <%= link_to post.user.name, post.user %> of the <%= post.user.family_name %> family
-        </span>
-        <span class="post-time">
-          Posted <%= time_ago_in_words(post.created_at) %> ago
-        </span>
-      </div>
-      <div class="post-body"><%= post.body %></div>
-      <div class="post-image"><%= image_tag post.img_url,
-                              class: "img-rounded center-block",
-                              width: 435 %>
-      </div>
-    </div>
-  <% end %>
+      <%= render @posts%>
 </div>

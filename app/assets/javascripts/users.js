@@ -19,4 +19,12 @@ function hideAndShow(hide, show) {
   $(show).css('display', 'block')
 }
 
+$('#comments-btn').click(function(){
+  showHidden('#comments')
+})
+
+function showHidden(hidden){
+  $(hidden).toggle();
+}
+
 })

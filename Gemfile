@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'kaminari'
 gem 'faker'
 gem 'bootstrap-sass'
+gem 'pry'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

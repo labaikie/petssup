@@ -1,0 +1,17 @@
+<div class="comments">
+  <div class="show-comments">
+
+
+  <% post.comments.each do |comment| %>
+    <div class="comment">
+      <div><%= comment.user %></div>
+      <div><%= comment.body %></div>
+    </div>
+  <% end %>
+  </div>
+  <div class="add-comment">
+    <%= form_for @comment do |f| %>
+    <%= f.text_field :body, :placeholder => "Comment Here", class: "form-field" %>
+    <% end %>
+  </div>
+</div>
