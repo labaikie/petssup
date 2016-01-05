@@ -38,3 +38,21 @@ latte = User.create(
   address: "Pangyo, Korea",
   profile_img: "latte-profile-img.jpg"
   )
+
+cotton_post1 = Post.create(
+  body: "Find me, I dare you",
+  img_url: "posts/cotton_flowers.jpg",
+  user_id: cotton.id
+  )
+
+cotton_post2 = Post.create(
+  body: "I have you",
+  img_url: "posts/cotton_tortured.jpg",
+  user_id: cotton.id
+  )
+
+ziola_post1 = Post.create(
+  body: "Need a playdate",
+  img_url: "posts/ziola_bored.jpg",
+  user_id: ziola.id
+  )
