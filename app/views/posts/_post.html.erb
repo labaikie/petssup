@@ -10,28 +10,25 @@
       </span>
     </div>
     <div class="post-body"><%= post.body %></div>
-    <div class="post-image">
-      <%= image_tag post.img_url,
-          class: "img-rounded"
-          if post.img_url?
-          end
-          %>
-    </div>
-    <div class="post-video">
-      <%= video_tag post.video_url
-          if post.video_url?
-          end
-      %>
-    </div>
+    <% if post.img_url? %>
+    <%= image_tag post.img_url,
+        class: "img-rounded post-image"
+    %>
+    <% end %>
+    <% if post.video_url? %>
+    <%= video_tag post.video_url,
+        class: "post-video"
+    %>
+    <% end %>
+    <% if current_user == post.user %>
     <div class="buttons">
       <div class="btn btn-default">
         <%= link_to 'Edit', edit_post_path(post.id) %>
       </div>
       <div class="btn btn-danger">
-      <% if current_user == post.user %>
-      <%= link_to "Delete", post, method: :delete,
-                                       data: { confirm: "You sure?" } %>
-      <% end %>
+        <%= link_to "Delete", post, method: :delete,
+            data: { confirm: "You sure?" } %>
       </div>
     </div>
+    <% end %>
 </div>

@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
   has_many :friends, through: :friendships
   has_many :sounds, dependent: :destroy
+  has_many :comments
 
 end

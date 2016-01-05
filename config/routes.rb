@@ -19,8 +19,12 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:create, :edit, :destroy, :new]
   patch 'posts/:id' => 'posts#update'
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
 
   resources :sounds, only: [:create, :edit, :destroy, :new]
   patch 'sounds/:id' => 'sounds#update'
+
 
 end
