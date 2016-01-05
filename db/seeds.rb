@@ -1,3 +1,5 @@
+User.delete_all
+
 cotton = User.create(
   name: "Cotton",
   email: "cotton@server.com",
@@ -6,7 +8,9 @@ cotton = User.create(
   family_name: "Lee",
   animal_type: "Cotton de Tulear",
   gender: "male",
-  human_name: "Yeon"
+  human_name: "Yeon",
+  address: "Seoul, Korea",
+  profile_img: "cotton-profile-img.jpg"
   )
 
 ziola = User.create(
@@ -17,7 +21,9 @@ ziola = User.create(
   family_name: "Oh",
   animal_type: "Dachshund",
   gender: "male",
-  human_name: "June"
+  human_name: "June",
+  address: "Suwon, Korea",
+  profile_img: "cotton-profile-img.jpg"
   )
 
 latte = User.create(
@@ -28,5 +34,7 @@ latte = User.create(
   family_name: "Ha",
   animal_type: "Kitten",
   gender: "female",
-  human_name: "Eunmi"
+  human_name: "Eunmi",
+  address: "Pangyo, Korea",
+  profile_img: "cotton-profile-img.jpg"
   )
