@@ -20,6 +20,7 @@
         class: "post-video"
     %>
     <% end %>
+
     <div class="buttons">
       <div class="btn btn-default", id="comments-btn">
         Comments
@@ -34,12 +35,14 @@
       </div>
     <% end %>
     </div>
+
     <div class="comments">
       <div class="show-comments">
       <% post.comments.each do |comment| %>
         <div class="comment">
-          <div><%= comment.user.name %></div>
-          <div><%= comment.body %></div>
+          <%= image_tag comment.user.profile_img, class: 'img-circle comment-icon' %>
+          <div><%= link_to comment.user.name, users_path(comment.user) %>&nbsp;&nbsp;</div>
+          <div><%= comment.body %>&nbsp;&nbsp;&nbsp;</div>
           <span id="delete-comment"><%= link_to "Delete", "posts/#{post.id}/comments/#{comment.id}", method: :delete %></span>
           <span id="edit-comment">Edit</span>
         </div>
@@ -47,9 +50,13 @@
       </div>
       <div class="add-comment">
         <%= form_for Comment.new, :url => post_comments_path(post) do |f| %>
-        <%= f.text_field :body, :placeholder => "Comment Here", class: "form-field" %>
-        <%= f.submit "Comment", class: "btn btn-success", id: "new-post-btn" %>
-        <% end %>
+        <%= f.text_field :body, :placeholder => "...Comment...", id: "new-comment-form"%>
+        <%= f.submit "Comment", class: "btn btn-success btn-xs", id: "new-comment-btn" %>
+        <div class="btn btn-primary btn-xs", id="new-comment-voice-btn">
+          Voice
+        </div>
+      <% end %>
       </div>
     </div>
+
 </div>

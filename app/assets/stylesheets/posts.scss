@@ -36,3 +36,35 @@
 .post-image {
   width: 435px;
 }
+
+.comments {
+  font-size: 14px;
+}
+
+.show-comments, .add-comment {
+  margin-top: 10px;
+}
+
+.comment > div, .comment > img {
+  display: inline-block;
+}
+
+.comment {
+  margin-bottom: 5px;
+}
+
+#new-comment-btn, #new-comment-voice-btn, #new-comment-form {
+  float: left;
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+
+#new-comment-form {
+  min-width: 75.5%;
+  height: 22px;
+}
+
+.comment-icon {
+  width: 30px;
+  height: 30px;
+}
