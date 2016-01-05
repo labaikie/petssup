@@ -1,21 +1,37 @@
 <div class="post">
     <div class="post-header">
+      <span class="post-time">
+        Posted <%= time_ago_in_words(post.created_at) %> ago
+      </span>
       <%= image_tag post.user.profile_img,
         class: 'img-circle user-icon' %>
       <span class="post-user">
         <%= link_to post.user.name, users_path(post.user) %> of the <%= post.user.family_name %> family
       </span>
-      <span class="post-time">
-        Posted <%= time_ago_in_words(post.created_at) %> ago
-      </span>
     </div>
     <div class="post-body"><%= post.body %></div>
-    <div class="post-image"><%= image_tag post.img_url,
-                            class: "img-rounded",
-                            width: 435 %>
+    <div class="post-image">
+      <%= image_tag post.img_url,
+          class: "img-rounded"
+          if post.img_url?
+          end
+          %>
+    </div>
+    <div class="post-video">
+      <%= video_tag post.video_url
+          if post.video_url?
+          end
+      %>
     </div>
     <div class="buttons">
-      <div class="btn btn-default"><%= link_to 'Edit', edit_post_path %></div>
-      <div class="btn btn-danger">Delete</div>
+      <div class="btn btn-default">
+        <%= link_to 'Edit', edit_post_path(post.id) %>
+      </div>
+      <div class="btn btn-danger">
+      <% if current_user == post.user %>
+      <%= link_to "Delete", post, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+      <% end %>
+      </div>
     </div>
 </div>
