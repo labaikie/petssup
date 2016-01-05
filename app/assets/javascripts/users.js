@@ -20,7 +20,7 @@ function hideAndShow(hide, show) {
 }
 
 $('#comments-btn').click(function(){
-  showHidden('#comments')
+  showHidden('.show-comments')
 })
 
 function showHidden(hidden){

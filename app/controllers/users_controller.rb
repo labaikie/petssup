@@ -3,12 +3,14 @@ class UsersController < ApplicationController
     @user = current_user
     @users = User.all
     @posts = Post.all.limit(6) # edit to popular posts later
+    @comment = Comment.new
   end
 
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
     @sounds = @user.sounds
+    @comment = Comment.new
   end
 
   def new
