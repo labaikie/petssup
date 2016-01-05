@@ -45,6 +45,7 @@
       <div><%= @user.created_at %></div>
   </div>
   <div class="buttons">
+    <% if current_user == @user %>
     <div class="btn btn-default" id="edit-profile-btn">
       Edit Profile
     </div>
@@ -52,6 +53,7 @@
       <%= link_to 'Delete Profile', @user, method: :delete,
           data: { confirm: 'Are you sure that you want to delete your profile?' }%>
     </div>
+    <% end %>
   </div>
 
 </div>

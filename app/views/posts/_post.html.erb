@@ -7,7 +7,7 @@
       <%= image_tag post.user.profile_img,
         class: 'img-circle user-icon' %>
       <span class="post-user">
-        <%= link_to post.user.name, users_path(post.user) %> of the <%= post.user.family_name %> family
+        <%= link_to post.user.name, user_path(post.user) %> of the <%= post.user.family_name %> family
       </span>
     </div>
 
@@ -29,10 +29,10 @@
       </div>
 
       <% if current_user == post.user %>
-      <div class="btn btn-default">
+      <div class="btn btn-default btn-sm">
         <%= link_to 'Edit', edit_post_path(post.id) %>
       </div>
-      <div class="btn btn-danger">
+      <div class="btn btn-danger btn-sm">
         <%= link_to "Delete", post, method: :delete,
             data: { confirm: "You sure?" } %>
       </div>
@@ -53,9 +53,9 @@
       <% post.comments.each do |comment| %>
         <div class="comment">
           <%= image_tag comment.user.profile_img, class: 'img-circle comment-icon' %>
-          <div><%= link_to comment.user.name, users_path(comment.user) %>&nbsp;&nbsp;</div>
+          <div><%= link_to comment.user.name, user_path(comment.user) %>&nbsp;&nbsp;</div>
           <div><%= comment.body %>&nbsp;&nbsp;&nbsp;</div>
-          <span id="delete-comment"><%= link_to "Delete", post_comment_path(post.id, comment.id), method: :delete %>&nbsp;</span>
+          <span id="delete-comment"><%= link_to "〤", post_comment_path(post.id, comment.id), method: :delete %>&nbsp;</span>
         </div>
       <% end %>
     </div>

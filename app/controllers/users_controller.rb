@@ -29,13 +29,16 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    unless @user == current_user
+      redirect_to :back
+    end
   end
 
   def update
     @user = User.find(params[:id])
     @posts = @user.posts
     @sounds = @user.sounds
-    if @user.update_attributes(profile_params)
+    if @user == current_user && @user.update_attributes(profile_params)
       redirect_to user_path(@user)
     else
       render :show
@@ -44,8 +47,10 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
-    redirect_to destroy_session_path
+    if @user == current_user
+      @user.destroy
+      redirect_to destroy_session_path
+    end
   end
 
   private

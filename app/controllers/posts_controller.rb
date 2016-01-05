@@ -18,20 +18,22 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to user_path(@post.user)
+    if @post.user == current_user
+      @post.destroy
+      redirect_to :back
+    end
   end
 
   def edit
     @post = Post.find(params[:id])
     unless @post.user == current_user
-      redirect_to users_path(@post.user)
+      redirect_to :back
     end
   end
 
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(post_params)
+    if @post.user == current_user && @post.update_attributes(post_params)
       redirect_to user_path(@post.user)
     else
       render :edit
