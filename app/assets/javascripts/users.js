@@ -23,6 +23,10 @@ $('#comments-btn').click(function(){
   showHidden('.show-comments')
 })
 
+$('#login').click(function(){
+  showHidden('#loginDp')
+})
+
 function showHidden(hidden){
   $(hidden).toggle();
 }

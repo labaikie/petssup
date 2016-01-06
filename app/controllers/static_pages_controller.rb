@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 
   def home
       @random = grab_random
+      @user = User.new
   end
 
   def grab_random

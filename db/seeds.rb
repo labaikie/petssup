@@ -1,4 +1,6 @@
 User.delete_all
+Post.delete_all
+Comment.delete_all
 
 cotton = User.create(
   name: "Cotton",

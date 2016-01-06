@@ -13,10 +13,8 @@
     <div class="<%= key %>"><%= value %></div>
     <% end %>
     <% else %>
-  <div>
-    <%= link_to "Join Us", new_user_path %>
-  </div>
-  <div>
+  <div id="join">Join Us</div>
+  <div id="login">
     <%= link_to "Sign In", new_session_path %>
   </div>
     <% end %>
