@@ -1,0 +1,20 @@
+  <div class="new-sound">
+
+    <%= form_for Sound.new do |f| %>
+
+    <% flash.each do |key,value| %>
+    <div class="<%=key %>" > <%= value %> </div>
+    <% end %>
+
+    <div class="form-group">
+      <span><%= f.label "Voice/Sound Type" %></span>
+      <span><%= f.text_field :type %></span>
+      <span><%=f.label "Voice/Sound Url" %></span>
+      <span><%=f.text_field :sound_url %></span>
+      <%= f.submit class: "btn btn-success", id: "new-sound-btn" %>
+    </div>
+
+
+    <% end %>
+
+  </div>

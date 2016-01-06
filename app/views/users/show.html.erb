@@ -14,17 +14,18 @@
     <div class="section-header">
         <div class="accent"><%= @user.name %>'s Voice</div>
         <div class="buttons" id="btn-to-header">
-        <%= link_to 'Add Sound', new_sound_path, class: 'btn btn-default' %>
+            <%= link_to 'Add Voice', sounds_path, method: :create, class: 'btn btn-default' %>
         </div>
     </div>
     <div id="user-sounds">
+        <%= render "sounds/form" %>
         <%= render @sounds %>
     </div>
 
     <div class="section-header">
         <div class="accent"><%= @user.name %>'s Posts</div>
         <div class="buttons" id="btn-to-header">
-        <%= link_to 'Create Post', new_post_path, class: 'btn btn-default' %>
+            <%= link_to 'Create Post', new_post_path, class: 'btn btn-default' %>
         </div>
     </div>
     <div id="user-posts">

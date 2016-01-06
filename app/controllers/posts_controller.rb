@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :current_user, only: [:create, :destroy, :update, :new]
+  before_action :current_user, only: [:create, :destroy, :update, :new, :edit]
 
   def new
     @post = Post.new
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "You have posted!"
-      redirect_to user_path(@post.user)
+      redirect_to :back
     else
       flash[:error] = "Posting was unsuccessful"
       redirect_to new_post_path

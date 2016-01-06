@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.create(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-      redirect_to @post.user
+      redirect_to :back
     else
       flash.now[:danger] = "error"
     end

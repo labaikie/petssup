@@ -24,8 +24,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
-  resources :sounds, only: [:create, :edit, :destroy, :new]
-  patch 'sounds/:id' => 'sounds#update'
+  resources :sounds, only: [:create, :update, :destroy]
 
   namespace :api do
     resources :posts, only: [:index, :show]

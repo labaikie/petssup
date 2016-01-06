@@ -1,31 +1,31 @@
-class SoundsController < ActionController::Base
-  before_action :current_user, only: [:create, :destroy, :new]
+class SoundsController < ApplicationController
 
-  def new
-    @sound = Sound.new
-  end
+  before_action :current_user, only: [:create, :destroy, :update]
 
   def create
     @sound = current_user.sounds.build(sound_params)
     if @sound.save
-      flash[:success] = "You have posted!"
-      redirect_to user_path
+      flash[:success] = "You have voiced!"
+      redirect_to :back
     else
-      flash[:error] = "Posting was unsuccessful"
-      redirect_to new_sound_path
+      flash[:error] = "Saving voice was unsuccessful"
     end
   end
 
-  def edit
+  def destroy
     @sound = Sound.find(params[:id])
+    if @sound.user == current_user
+      @sound.destroy
+      redirect_to :back
+    end
   end
 
   def update
     @sound = Sound.find(params[:id])
-    if @sound.update_attributes(sound_params)
-      redirect_to user_path
+    if @sound.user == current_user && @sound.update_attributes(sound_params)
+      redirect_to user_path(@sound.user)
     else
-      render :edit
+      flash[:error] = "updating voice was unsuccessful"
     end
   end
 
@@ -34,8 +34,7 @@ class SoundsController < ActionController::Base
   def sound_params
     params.require(:sound).permit(
       :type,
-      :sound_url,
-      :user_id
+      :sound_url
     )
   end
 
