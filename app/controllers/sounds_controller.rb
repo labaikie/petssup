@@ -5,10 +5,10 @@ class SoundsController < ApplicationController
   def create
     @sound = current_user.sounds.build(sound_params)
     if @sound.save
-      flash[:success] = "You have voiced!"
+      flash[:success] = "You've added a voice!"
       redirect_to :back
     else
-      flash[:error] = "Saving voice was unsuccessful"
+      flash[:error] = "Adding voice was unsuccessful"
     end
   end
 
@@ -33,7 +33,7 @@ class SoundsController < ApplicationController
 
   def sound_params
     params.require(:sound).permit(
-      :type,
+      :sound_type,
       :sound_url
     )
   end

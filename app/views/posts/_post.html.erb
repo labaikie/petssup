@@ -55,7 +55,9 @@
           <%= image_tag comment.user.profile_img, class: 'img-circle comment-icon' %>
           <div><%= link_to comment.user.name, user_path(comment.user) %>&nbsp;&nbsp;</div>
           <div><%= comment.body %>&nbsp;&nbsp;&nbsp;</div>
+          <% if comment.user == current_user %>
           <span id="delete-comment"><%= link_to "✖", post_comment_path(post.id, comment.id), method: :delete %>&nbsp;</span>
+          <% end %>
         </div>
       <% end %>
     </div>

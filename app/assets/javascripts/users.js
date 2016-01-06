@@ -1,9 +1,3 @@
-// $('#join').click(displayJoin);
-
-// function displayJoin() {
-//   $('#joinDp').css("display", "block");
-// }
-
 $(function(){
 
 $('#edit-profile-btn').click(function(){
@@ -41,6 +35,10 @@ $('#login').click(function(){
 
 function showHidden(hidden){
   $(hidden).toggle();
-}
+};
+
+$('.play').on("click", function(event) {
+  $(event.currentTarget).find('audio')[0].play();
+});
 
 })

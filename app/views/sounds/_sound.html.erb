@@ -1,10 +1,18 @@
 <div class="sound">
 
   <div class="show-sound">
-    <%= audio_tag sound.sound_url %>
-    <span class="sound-type"><%= sound.type %></span>
-    <span>Edit</span>
-    <span id="delete-sound"><%= link_to "✖", "/sounds/:id", method: :delete %></span>
+    <span class="btn btn-primary btn-xs play" >
+      <%= sound.sound_type %>♪
+      <%= audio_tag sound.sound_url, id: sound.id, class: "btn btn-default btn-sm audio-play" %>
+    </span>
+    <span>
+    </span>
+    <% if current_user == sound.user %>
+    <span id="delete-sound">
+      <%= link_to "✖", sound, method: :delete,
+                  data: { confirm: "You sure?" } %>
+    </span>
+    <% end %>
   </div>
 
 </div>
