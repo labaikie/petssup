@@ -1,5 +1,8 @@
-#joinDp, #loginDp, #postDp {
-  display: block;
+#loginDp, #joinDp {
+  display: none;
+}
+
+#joinDp, #loginDp, #loginDpp, #joinDpp, #postDp {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -8,6 +11,7 @@
   z-index: 2;
   background-color: rgba(0,0,0,0.35);
 }
+
 
 .screen {
   margin: 15% auto 0 auto;
