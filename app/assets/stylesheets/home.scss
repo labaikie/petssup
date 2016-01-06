@@ -40,10 +40,35 @@ header div {
   border: 1px black solid;
 }
 
+#home-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .column {
-  margin-left: 10%;
-  width: 500px;
-  min-height: 800px;
   float: left;
+  margin-top: 28.1%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
+  min-height: 800px;
   border: 1px black solid;
+}
+
+#newsfeed-heading {
+  text-align: center;
+  font-size: 32px;
+}
+
+.column > div, .column > article {
+  margin: 0 15px;
+  padding-bottom: 20px;
+}
+
+.news-title {
+  font-size: 22px;
+}
+
+.news-date {
+  font-size: 14px;
 }
