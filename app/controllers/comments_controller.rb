@@ -2,15 +2,21 @@ class CommentsController < ApplicationController
   before_action :current_user
 
   def create
-    @post = Post.find(params[:post_id])
-    # @comment = Comment.new(comment_params)
-    @comment = @post.comments.create(comment_params)
-    @comment.user_id = current_user.id
-    if @comment.save
-      redirect_to :back
-    else
+    if params[:comment][:body] == "" && params[:comment][:sound_id] == "add voice"
       flash.now[:danger] = "error"
       redirect_to :back
+    else
+
+      @post = Post.find(params[:post_id])
+      # @comment = Comment.new(comment_params)
+      @comment = @post.comments.create(comment_params)
+      @comment.user_id = current_user.id
+      if @comment.save
+        redirect_to :back
+      else
+        flash.now[:danger] = "error"
+        redirect_to :back
+      end
     end
   end
 

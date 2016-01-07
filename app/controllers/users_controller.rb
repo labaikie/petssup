@@ -6,9 +6,23 @@ class UsersController < ApplicationController
     @users = User.all
     @posts = Post.all.limit(6) # edit to popular posts later
     @comment = Comment.new
+    @news = get_api_news(10)
+    @latest_blurb = get_latest_blurb
+  end
+
+  def get_api_news(count)
     data = HTTParty.get("http://content.guardianapis.com/search?q=pet&pets&animal&lifestyle&from-date=2015-12-01&api-key=8327ea7e-bc39-4935-a195-90e140c7c7e8")
     response = JSON.parse(data.body)
-    @news = response['response']['results'][0..10]
+    return response['response']['results'][0..count]
+  end
+
+  def get_latest_blurb
+    user = current_user
+    if user.posts.last.body?
+      return user.posts.last.body
+    else
+      return user.posts.sample.body
+    end
   end
 
   def show

@@ -1,6 +1,6 @@
 class SoundsController < ApplicationController
 
-  before_action :current_user, only: [:create, :destroy, :update]
+  before_action :current_user, only: [:create, :destroy]
 
   def create
     @sound = current_user.sounds.build(sound_params)

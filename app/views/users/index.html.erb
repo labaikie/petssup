@@ -1,31 +1,42 @@
-<div id="main-header">
-  <div class="accent"><%= @user.name %> of the <%= @user.family_name %> family</div>
-  <div>
-    <%= image_tag @user.profile_img,
+<div id="user-index">
+
+  <div id="index-header">
+    <div id="index-intro" class="accent">
+      <div>
+        <%= link_to @user.name, user_path(@user) %> of the <%= @user.family_name %> family
+      </div>
+      <%= image_tag @user.profile_img,
           class: 'img-circle profile-img center-block' %>
-    <div class="buttons">
-      <div class="btn btn-default"><%= link_to "Post", new_post_path %></div>
+      <div>
+        <%= @latest_blurb %>
+      </div>
+      <div>
+        <%= link_to "Post", new_post_path, id: "index-btn" %>
+      </div>
     </div>
   </div>
-</div>
 
-<div id="main-content">
-  <div class="content-header">
-    Here are some posts that are trending
-  </div>
+  <div id="index-content">
+    <div id="index-post">
+      <div class="accent">
+        Latest Posts Around You
+      </div>
       <%= render @posts %>
-</div>
-
-<div id="home-content">
-  <div class="column" id="newsfeed">
-    <div class ="accent" id="newsfeed-heading">
-      Pet News
     </div>
-    <% @news.each do |news| %>
-    <article>
-      <%= link_to news['webTitle'], news['webUrl'], class: "news-title" %>
-      &nbsp;&nbsp;
-      <span id="news-date"><%= news['webPublicationDate'] %></span>
-    </article>
-    <% end %>
+    <div id="index-news">
+    <div class="column" id="newsfeed">
+      <div class ="accent" id="newsfeed-heading">
+        Pet News
+      </div>
+      <% @news.each do |news| %>
+      <article>
+        <%= link_to news['webTitle'], news['webUrl'], class: "news-title" %>
+        &nbsp;&nbsp;
+        <span id="news-date"><%= news['webPublicationDate'] %></span>
+      </article>
+      <% end %>
+    </div>
+    </div>
   </div>
+
+</div>

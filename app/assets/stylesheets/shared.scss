@@ -48,6 +48,11 @@ header div {
   color: $creamsicle;
 }
 
+#login:hover, #join:hover, #menu:hover {
+  cursor: pointer;
+  color: $amita-orange;
+}
+
 #menu {
   color: $lonely-olive;
 }
@@ -72,10 +77,6 @@ footer div {
   font-size: 22px;
 }
 
-#login {
-  color: $amita-orange;
-}
-
 .accent {
   font-family: $accent-font2;
   font-size: $accent;
@@ -94,6 +95,10 @@ footer div {
   font-size: 22px;
 }
 
+.success {
+  color: $lonely-olive;
+}
+
 // Form //
 
 .form-group > div > label {
@@ -103,7 +108,7 @@ footer div {
 form > input {
   border-radius: 5px;
   min-width: 100px;
-  background-color: $filth;
+  background-color: white;
 }
 
 form > a {
@@ -117,5 +122,24 @@ a {
   font-family: $logo-font;
 }
 
-// Button //
+// Buttons //
+
+.la-btn  {
+  width: 80px;
+  height: 40px;
+  font-family: $accent-font1;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.la-btn > a {
+  font-family: $accent-font1;
+  color: $lonely-olive;
+  font-size: 20px;
+  font-style: bold;
+}
+
+.btn {
+  min-width: 100px;
+}
 

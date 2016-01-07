@@ -1,46 +1,36 @@
-$(function(){
+$(document).on('ready page:load', function() {
 
-// function mouseIn(div){ // link effect
-//   $(div).css('text-decoration','underline');
-// };
+  function hideAndShow(hide, show) { // hides and shows divs (modals)
+    $(hide).css('display', 'none');
+    $(show).css('display', 'block');
+  };
 
-// function mouseOut(div){ // link effect
-//   $(div).css('text-decoration','none');
-// };
+  $('#edit-profile-btn').click(function(){
+    hideAndShow('#show-profile','#edit-profile');
+  });
 
-// $('#join').mouseenter(mouseIn('#join'),mouseOut('#join'));
+  $('#edit-post-btn').click(function(){
+    hideAndshow('#edit-profile','#show-profile');
+  });
 
-function hideAndShow(hide, show) { // hides and shows divs (modals)
-  $(hide).css('display', 'none');
-  $(show).css('display', 'block');
-};
+  function showHidden(hidden){ // shows or hides divs
+    $(hidden).toggle();
+  };
 
-$('#edit-profile-btn').click(function(){
-  hideAndShow('#show-profile','#edit-profile');
-});
+  $('.comments-btn').click(function(event){
+    showHidden($(event.currentTarget).parent().parent().children()[5]);
+  });
 
-$('#edit-post-btn').click(function(){
-  hideAndshow('#edit-profile','#show-profile');
-});
+  $('#join').click(function(){
+    showHidden('#joinDp');
+  });
 
-function showHidden(hidden){ // shows or hides divs
-  $(hidden).toggle();
-};
+  $('#login').click(function(){
+    showHidden('#loginDp');
+  });
 
-$('#comments-btn').click(function(){
-  showHidden('.show-comments');
-});
-
-$('#join').click(function(){
-  showHidden('#joinDp');
-});
-
-$('#login').click(function(){
-  showHidden('#loginDp');
-});
-
-$('.play').on("click", function(event) {
-  $(event.currentTarget).find('audio')[0].play();
-});
+  $('.play').on("click", function(event) {
+    $(event.currentTarget).find('audio')[0].play();
+  });
 
 });

@@ -24,10 +24,9 @@
     <% end %>
 
     <div class="buttons">
-      <div class="btn btn-default btn-sm" id="comments-btn">
-        Show/Hide Comments
+      <div class="comments-btn" id="commentsbtn<%post.id%>">
+        <%= post.comments.count %> Comments
       </div>
-
       <% if current_user == post.user %>
       <div class="btn btn-default btn-sm">
         <%= link_to 'Edit', edit_post_path(post.id) %>
