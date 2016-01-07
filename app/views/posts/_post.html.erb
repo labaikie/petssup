@@ -18,7 +18,7 @@
     %>
     <% end %>
     <% if post.video_url? %>
-    <%= video_tag post.video_url,
+    <%= video_tag post.video_url, controls: true, autobuffer: true,
         class: "post-video"
     %>
     <% end %>
