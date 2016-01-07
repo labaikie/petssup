@@ -20,15 +20,6 @@ class SoundsController < ApplicationController
     end
   end
 
-  def update
-    @sound = Sound.find(params[:id])
-    if @sound.user == current_user && @sound.update_attributes(sound_params)
-      redirect_to user_path(@sound.user)
-    else
-      flash[:error] = "updating voice was unsuccessful"
-    end
-  end
-
   private
 
   def sound_params

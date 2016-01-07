@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session
 
-  get 'targets/' => 'targets#index', as: :targets
-
   resources :posts, only: [:create, :edit, :destroy, :new]
   patch 'posts/:id' => 'posts#update'
 
@@ -24,7 +22,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
-  resources :sounds, only: [:create, :update, :destroy]
+  resources :sounds, only: [:create, :destroy]
 
   namespace :api do
     resources :posts, only: [:index, :show]
