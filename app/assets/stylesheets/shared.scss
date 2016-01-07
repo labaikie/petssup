@@ -29,6 +29,7 @@ body {
   margin: 0 auto;
   font-family: $main-font;
   font-size: $small-font;
+  color: $lonely-olive;
 }
 
 header {
@@ -54,16 +55,25 @@ header div {
 footer {
   clear: both;
   min-height: $banner;
-  background-color: $creamsicle;
+  background-color: $filth;
 }
 
 footer div {
   margin: 0 $min-margin;
   margin-bottom: $min-margin;
   display: inline-block;
-  font-family: $logo-font;
+  font-family: $accent-font1;
   font-size: 38px;
   color: $lonely-olive;
+}
+
+#copyright {
+  color: $anemone-beige;
+  font-size: 22px;
+}
+
+#login {
+  color: $amita-orange;
 }
 
 .accent {
@@ -74,4 +84,37 @@ footer div {
 .logo-style {
   font-family: $logo-font;
 }
+
+.logo-style > span {
+  color: $creamsicle;
+}
+
+.error {
+  color: white;
+  font-size: 22px;
+}
+
+// Form //
+
+.form-group > div > label {
+  font-size: 22px;
+}
+
+form > input {
+  border-radius: 5px;
+  min-width: 100px;
+  background-color: $filth;
+}
+
+form > a {
+  margin-left: 15px;
+}
+
+// Link //
+
+a {
+  color: $creamsicle;
+}
+
+// Button //
 

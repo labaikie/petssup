@@ -19,15 +19,38 @@
   color: $creamsicle;
 }
 
-.main-msg {
-  margin: 10% 10% 12% 10%;
+.main-msg, #about {
+  margin: 10% 10% 0 10%;
   min-height: 200px;
   font-size: $accent;
   color: $lonely-olive;
 }
 
 .main-msg > span {
-  background-color: $creamsicle;
+  background-color: $amita-orange;
 }
 
+#frame {
+  width: 100%;
+  min-height: 900px;
+  background-color: $anemone-beige;
+}
 
+.square {
+  margin: 20% auto 20% auto;
+  padding: 20px;
+  float: left;
+  width: 380px;
+  height: 400px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 150px;
+  color: $creamsicle;
+}
+
+.desc {
+  font-size: 24px;
+  color: $lonely-olive;
+}
