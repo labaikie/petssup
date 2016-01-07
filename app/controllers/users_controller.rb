@@ -17,11 +17,11 @@ class UsersController < ApplicationController
   end
 
   def get_latest_blurb
-    user = current_user
-    if user.posts.last.body?
-      return user.posts.last.body
-    else
-      return user.posts.sample.body
+    user_posts = current_user.posts.reverse_order
+    user_posts.each do |post|
+      if post.body != ""
+        return post.body
+      end
     end
   end
 

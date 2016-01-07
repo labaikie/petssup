@@ -9,8 +9,12 @@
 #index-header {
   padding-top: 250px;
   padding-bottom: 150px;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
+}
+
+#index-greeting {
+  font-size: 50px;
 }
 
 #index-intro > div, #index-intro > img {
@@ -21,6 +25,12 @@
 #index-intro > img {
   margin-top: $min-margin;
   margin-bottom: $min-margin;
+}
+
+#latest-blurb {
+  font-family: $accent-font1;
+  font-size: 28px;
+  padding-bottom: 15px;
 }
 
 #index-btn {

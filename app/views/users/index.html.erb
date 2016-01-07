@@ -1,14 +1,14 @@
 <div id="user-index">
 
   <div id="index-header">
-    <div id="index-intro" class="accent">
-      <div>
+    <div id="index-intro">
+      <div id="index-greeting">
         <%= link_to @user.name, user_path(@user) %> of the <%= @user.family_name %> family
       </div>
       <%= image_tag @user.profile_img,
           class: 'img-circle profile-img center-block' %>
-      <div>
-        <%= @latest_blurb %>
+      <div id="latest-blurb">
+        "<%= @latest_blurb %>"
       </div>
       <div>
         <%= link_to "Post", new_post_path, id: "index-btn" %>
