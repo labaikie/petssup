@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
       redirect_to :back
     else
       flash.now[:danger] = "error"
+      redirect_to :back
     end
   end
 
