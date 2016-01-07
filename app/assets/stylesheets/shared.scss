@@ -31,15 +31,11 @@ body {
   font-size: $small-font;
 }
 
-main {
-  padding-bottom: 25px;
-}
-
 header {
   position: fixed;
   top: $min-margin;
   width: 100%;
-  height: $banner;
+  min-height: $banner;
 }
 
 header div {

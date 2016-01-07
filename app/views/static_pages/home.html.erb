@@ -9,21 +9,3 @@
 <%= render "shared/new_session" %>
 <%= render "shared/new_user" %>
 
-<div id="home-content">
-  <div class="column" id="newsfeed">
-    <div class ="accent" id="newsfeed-heading">
-      Pet News from the Guardian
-    </div>
-    <% @news.each do |news| %>
-    <article>
-      <%= link_to news['webTitle'], news['webUrl'], class: "news-title" %>
-      &nbsp;&nbsp;
-      <span id="news-date"><%= news['webPublicationDate'] %></span>
-    </article>
-    <% end %>
-  </div>
-
-  <div class="column">
-  </div>
-
-</div>

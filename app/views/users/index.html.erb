@@ -15,3 +15,17 @@
   </div>
       <%= render @posts %>
 </div>
+
+<div id="home-content">
+  <div class="column" id="newsfeed">
+    <div class ="accent" id="newsfeed-heading">
+      Pet News
+    </div>
+    <% @news.each do |news| %>
+    <article>
+      <%= link_to news['webTitle'], news['webUrl'], class: "news-title" %>
+      &nbsp;&nbsp;
+      <span id="news-date"><%= news['webPublicationDate'] %></span>
+    </article>
+    <% end %>
+  </div>

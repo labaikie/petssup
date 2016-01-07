@@ -5,7 +5,7 @@
   top: 0;
   z-index: -3;
   width: 1440px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 #logo {
@@ -20,7 +20,7 @@
 }
 
 .main-msg {
-  margin: 10%;
+  margin: 10% 10% 12% 10%;
   min-height: 200px;
   font-size: $accent;
   color: $lonely-olive;
@@ -30,37 +30,4 @@
   background-color: $creamsicle;
 }
 
-#home-content {
-  width: 80%;
-  max-height: 800px;
-  margin: 0 auto;
-  margin-bottom: 15%;
-}
 
-.column {
-  float: left;
-  margin-top: 28.1%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 550px;
-  min-height: 800px;
-  border: 1px black solid;
-}
-
-#newsfeed-heading {
-  text-align: center;
-  font-size: 32px;
-}
-
-.column > div, .column > article {
-  margin: 0 15px;
-  padding-bottom: 20px;
-}
-
-.news-title {
-  font-size: 22px;
-}
-
-.news-date {
-  font-size: 14px;
-}
