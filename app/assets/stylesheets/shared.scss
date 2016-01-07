@@ -31,6 +31,10 @@ body {
   font-size: $small-font;
 }
 
+main {
+  padding-bottom: 25px;
+}
+
 header {
   position: fixed;
   top: $min-margin;
@@ -47,22 +51,31 @@ header div {
   color: $creamsicle;
 }
 
+#menu {
+  color: $lonely-olive;
+}
+
 footer {
   clear: both;
-  height: $banner;
+  min-height: $banner;
   background-color: $creamsicle;
 }
 
 footer div {
-  margin: 0 15px;
+  margin: 0 $min-margin;
+  margin-bottom: $min-margin;
   display: inline-block;
   font-family: $logo-font;
-  font-size: $accent;
+  font-size: 38px;
   color: $lonely-olive;
 }
 
 .accent {
   font-family: $accent-font2;
   font-size: $accent;
+}
+
+.logo-style {
+  font-family: $logo-font;
 }
 

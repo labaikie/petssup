@@ -1,11 +1,9 @@
 <div id="welcome">
-  <%= image_tag @random,
-        width: 1440,
-        style: "opacity: 0.8",
-        id: "background-image"
-  %>
-  <div id="logo">Petssup</div>
-  <div class="main-msg">Petssup is the social network for pets by pets. At Petssup, your pets voice themselves freely on stuff they love, including food, humans, and other pets! If your pet is not yet a part of this latest trend, please let them borrow your email and sign up so that they don't feel left behind!</div>
+  <%= image_tag @random,id: "background-image" %>
+  <div id="logo">Petss<span>up</span></div>
+  <div class="main-msg"><span>
+    <span class="logo-style">Petssup</span> is the social network for pets by pets. At <span class="logo-style">Petssup</span>, your pets voice themselves freely on stuff they love, including food, humans, and other pets! If your pet is not yet a part of this latest trend, please let them borrow your email and sign up so that they don't feel left behind!
+  </span></div>
 </div>
 
 <%= render "shared/new_session" %>

@@ -3,26 +3,38 @@
 #background-image {
   position: absolute;
   top: 0;
-  z-index: -5;
+  z-index: -3;
+  width: 1440px;
+  opacity: 0.9;
 }
 
 #logo {
-  margin: 43% 10% 0 10%;
+  margin: 36% 10% 0 10%;
   font-family: $logo-font;
-  font-size: 150px;
-  color: black;
+  font-size: 190px;
+  color: $lonely-olive;
+}
+
+#logo > span {
+  color: $creamsicle;
 }
 
 .main-msg {
-  margin: 0 10%;
+  margin: 10%;
   min-height: 200px;
-  font-size: 24px;
-  border: 1px black solid;
+  font-size: $accent;
+  color: $lonely-olive;
+}
+
+.main-msg > span {
+  background-color: $creamsicle;
 }
 
 #home-content {
   width: 80%;
+  max-height: 800px;
   margin: 0 auto;
+  margin-bottom: 15%;
 }
 
 .column {
