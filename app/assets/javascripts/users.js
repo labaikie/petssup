@@ -13,14 +13,6 @@ $('#edit-post-btn').click(function(){
   hideAndshow('#edit-profile','#show-profile');
 });
 
-$('#login-on-join').click(function(){
-  hideAndshow('#joinDp','#loginDp');
-});
-
-$('#join-on-login').click(function(){
-  hideAndshow('#loginDp','#joinDp');
-});
-
 function showHidden(hidden){
   $(hidden).toggle();
 };
@@ -34,12 +26,8 @@ $('#join').click(function(){
 });
 
 $('#login').click(function(){
+  console.log('toggle');
   showHidden('#loginDp');
-});
-
-$('#signout').click(function(){
-  $('#joinDp').css('display', 'none');
-  $('#joinDp').css('display', 'none');
 });
 
 $('.play').on("click", function(event) {

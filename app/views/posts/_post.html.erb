@@ -25,7 +25,7 @@
 
     <div class="buttons">
       <div class="btn btn-default btn-sm" id="comments-btn">
-        Comments
+        Show/Hide Comments
       </div>
 
       <% if current_user == post.user %>
@@ -44,7 +44,7 @@
         <%= f.text_field :body, :placeholder => "...Comment...", class: "new-comment-form" %>
         <%= f.select :sound_id do %>
             <%= content_tag :option, "add voice" %>
-          <% post.user.sounds.each do |s| -%>
+          <% @user.sounds.each do |s| -%>
             <%= content_tag :option, s.sound_type, value: s.id %>
           <% end %>
         <% end %>
