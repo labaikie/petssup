@@ -11,28 +11,4 @@
 @import 'users_new_login';
 @import 'users_show';
 @import 'home';
-
-body {
-  margin: 0 auto;
-  font-family: $main-font;
-  font-size: 18px;
-}
-
-footer {
-  clear: both;
-  height: 50px;
-  background-color: #cccccc;
-}
-
-footer div {
-  margin: 0 15px;
-  display: inline-block;
-  font-family: $logo-font;
-  font-size: 30px;
-}
-
-.accent {
-  font-family: $accent-font1;
-  font-size: 40px;
-}
-
+@import 'shared';

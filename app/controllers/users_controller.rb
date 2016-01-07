@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize
+
   def index
     @user = current_user
     @users = User.all

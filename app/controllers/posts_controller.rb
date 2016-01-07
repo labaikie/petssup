@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :current_user, only: [:create, :destroy, :update, :new, :edit]
+  before_action :authorize
 
   def new
     @post = Post.new

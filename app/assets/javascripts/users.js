@@ -1,6 +1,16 @@
 $(function(){
 
-function hideAndShow(hide, show) {
+// function mouseIn(div){ // link effect
+//   $(div).css('text-decoration','underline');
+// };
+
+// function mouseOut(div){ // link effect
+//   $(div).css('text-decoration','none');
+// };
+
+// $('#join').mouseenter(mouseIn('#join'),mouseOut('#join'));
+
+function hideAndShow(hide, show) { // hides and shows divs (modals)
   $(hide).css('display', 'none');
   $(show).css('display', 'block');
 };
@@ -13,7 +23,7 @@ $('#edit-post-btn').click(function(){
   hideAndshow('#edit-profile','#show-profile');
 });
 
-function showHidden(hidden){
+function showHidden(hidden){ // shows or hides divs
   $(hidden).toggle();
 };
 
@@ -26,7 +36,6 @@ $('#join').click(function(){
 });
 
 $('#login').click(function(){
-  console.log('toggle');
   showHidden('#loginDp');
 });
 
