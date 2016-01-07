@@ -41,12 +41,15 @@
 
     <div class="add-comment">
       <%= form_for @comment, :url => post_comments_path(post) do |f| %>
-      <%= f.text_field :body, :placeholder => "...Comment...", id: "new-comment-form"%>
+        <%= f.text_field :body, :placeholder => "...Comment...", class: "new-comment-form" %>
+        <%= f.select :sound_id do %>
+            <%= content_tag :option, "add voice" %>
+          <% post.user.sounds.each do |s| -%>
+            <%= content_tag :option, s.sound_type, value: s.id %>
+          <% end %>
+        <% end %>
       <%= f.submit "Comment", class: "btn btn-success btn-xs", id: "new-comment-btn" %>
       <% end %>
-      <button type="button" class="btn btn-primary btn-xs" id="new-comment-voice-btn">
-        Voice
-      </button>
     </div>
 
     <div class="show-comments">
@@ -54,7 +57,15 @@
         <div class="comment">
           <%= image_tag comment.user.profile_img, class: 'img-circle comment-icon' %>
           <div><%= link_to comment.user.name, user_path(comment.user) %>&nbsp;&nbsp;</div>
-          <div><%= comment.body %>&nbsp;&nbsp;&nbsp;</div>
+          <div>
+            <%= comment.body %>&nbsp;&nbsp;&nbsp;
+            <% if comment.sound %>
+            <span class="play">
+              <%= comment.sound.sound_type %>♪
+              <%= audio_tag comment.sound.sound_url, id: comment.sound.id, class: "audio-play" %>
+            </span>
+            <% end %>
+          </div>
           <% if comment.user == current_user %>
           <span id="delete-comment"><%= link_to "✖", post_comment_path(post.id, comment.id), method: :delete %>&nbsp;</span>
           <% end %>
