@@ -29,7 +29,7 @@ $(document).on('ready page:load', function() {
   };
 
   $('.comments-btn').click(function(event){
-    showHidden($(event.currentTarget).parent().parent().children()[5]);
+    showHidden($(event.currentTarget).parent().parent().children().last());
   });
 
   $('#join').click(function(){
