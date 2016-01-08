@@ -1,11 +1,9 @@
 <div class="sound">
 
   <div class="show-sound">
-    <span class="btn btn-primary btn-xs play" >
+    <span class="btn btn-default btn-xs play" >
       <%= sound.sound_type %>♪
-      <%= audio_tag sound.sound_url, id: sound.id, class: "btn btn-default btn-sm audio-play" %>
-    </span>
-    <span>
+      <%= audio_tag sound.sound_url, id: sound.id, class: "audio-play" %>
     </span>
     <% if current_user == sound.user %>
     <span id="delete-sound">

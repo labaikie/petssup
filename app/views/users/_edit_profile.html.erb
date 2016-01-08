@@ -50,8 +50,8 @@
       <div>Profile Image Url</div>
       <div><%= f.text_field :profile_img, class: 'form-control' %></div>
   </div>
-  <div class="buttons">
-    <%= f.submit "Save Changes", class: "btn btn-primary" %>
+  <div>
+    <%= f.submit "Save Changes", class: "btn btn-default", id: "profile-btn"%>
   </div>
 
   <% end %>

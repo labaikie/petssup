@@ -44,9 +44,9 @@
       <div>Member Since</div>
       <div><%= @user.created_at %></div>
   </div>
-  <div class="buttons">
+  <div id="profile-btns">
     <% if current_user == @user %>
-    <div class="btn btn-default" id="edit-profile-btn">
+    <div class="btn btn-default logo-style" id="edit-profile-btn">
       Edit Profile
     </div>
     <div class="btn btn-danger">

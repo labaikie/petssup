@@ -13,9 +13,6 @@
       <%= link_to "Main", users_path(current_user) %>
     </div>
 
-      <% flash.each do |key, value| %>
-      <div class="<%= key %>"><%= value %></div>
-      <% end %>
 
   <% else %>
 
@@ -23,5 +20,9 @@
     <div id="join">Join</div>
 
   <% end %>
+
+    <% flash.each do |key, value| %>
+    <div class="<%= key %>"><%= value %></div>
+    <% end %>
 
 </header>

@@ -8,8 +8,10 @@
 
 #user-profile, #user-content {
   float: left;
-  margin-top: 70px;
+  margin: 70px 0;
+  padding: 20px 0;
 }
+
 
 #user-profile {
   width: 40%;
@@ -19,9 +21,11 @@
 
 #user-content {
   width: 60%;
-  border: $anemone-beige 3px solid;
+  border: $anemone-beige 4px solid;
   border-radius: 10px;
 }
+
+// Profile Section //
 
 #user-profile > div, #user-content > div {
   margin: 15px 25px;
@@ -38,27 +42,49 @@
   height: 28px;
 }
 
-.buttons {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-#btn-to-header {
- float: right;
-}
-
-.buttons > div, .buttons > input {
-  margin-right: 5%;
-  margin-top: 2%;
-}
-
 #edit-profile {
   display: none;
   margin-top: 50px;
 }
 
+#profile-btns > div {
+  float: right;
+  margin-left: 20px;
+}
+
+#profile-btn {
+  margin: 0 auto;
+}
+
+// Post //
+
 #show-posts {
   margin: 0 auto;
   width: 480px;
 }
+
+#create-post-btn {
+  float: right;
+  background-color: $amita-orange;
+}
+
+// Sound //
+
+#user-sounds {
+  background-color: $amita-orange;
+  border-radius: 10px;
+  padding: 7px;
+  min-height: 100px;
+}
+
+#new-sound-btn {
+  float: right;
+  font-family: $logo-font;
+  color: $lonely-olive;
+}
+
+.show-sound {
+  float: left;
+}
+
+

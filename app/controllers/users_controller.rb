@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize
+  before_action :authorize, only: [:index, :show, :edit, :update, :destroy]
 
   def index
     @user = current_user
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
 
   def create
     if User.new(user_params).save
-      flash[:success] = "You are now registered!"
+      flash[:success] = "Thanks for joining!"
       redirect_to root_path
     else
       flash[:error] = "Registration was unsuccessful"
