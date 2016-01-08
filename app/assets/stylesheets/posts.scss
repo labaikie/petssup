@@ -61,9 +61,10 @@
 
 .show-comments {
   display: none;
+  padding-bottom: 15px;
 }
 
-.add-comment, .comment {
+.add-comment {
   padding: 5px 0 15px 0;
 }
 
@@ -98,4 +99,9 @@
 .comment-icon {
   width: 35px;
   height: 35px;
+}
+
+.play:hover {
+  cursor: pointer;
+  color: $amita-orange;
 }
