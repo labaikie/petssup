@@ -48,6 +48,14 @@ header div {
   color: $creamsicle;
 }
 
+#toggle {
+  display: none;
+}
+
+#toggle div {
+  margin: 0 $min-margin;
+}
+
 #login:hover, #join:hover, #menu:hover {
   cursor: pointer;
   color: $amita-orange;

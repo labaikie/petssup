@@ -1,7 +1,19 @@
 $(document).on('ready page:load', function() {
 
+  // $('#menu').click(function(){
+  //   $('#toggle').animate({
+  //     display: 'toggle',
+  //     opacity: '0.8'
+  //   }, "slow");
+  // });
+
+  $('#menu').click(function(){
+    $('#toggle').fadeToggle(300)
+  });
+
+
   var scroll_pos = 0;
-  $(document).scroll(function() {
+  $(document).scroll(function() {  // header change color upon scroll down
       scroll_pos = $(this).scrollTop();
       if(scroll_pos < 800) {
           $("header").css('background-color', 'transparent');

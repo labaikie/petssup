@@ -9,7 +9,7 @@
 }
 
 #index-header {
-  padding-top: 230px;
+  padding-top: 180px;
   padding-bottom: 150px;
   width: 70%;
   margin: 0 auto;
@@ -27,6 +27,8 @@
 #index-intro > img {
   margin-top: $min-margin;
   margin-bottom: $min-margin;
+  width: 400px;
+  height: 400px;
 }
 
 #latest-blurb {
