@@ -1,14 +1,12 @@
 $(document).on('ready page:load', function() {
 
-  // $('#menu').click(function(){
-  //   $('#toggle').animate({
-  //     display: 'toggle',
-  //     opacity: '0.8'
-  //   }, "slow");
-  // });
 
-  $('#menu').click(function(){
+  $('#menu').click(function(){ // fade-in/out animation for header menu
     $('#toggle').fadeToggle(300)
+  });
+
+  $('#index-btn').click(function(){ // show post modal on user index
+    $('#post-modal').fadeToggle(300);
   });
 
 

@@ -38,12 +38,22 @@
 }
 
 #index-btn {
+  width: 100px;
   border-radius: 5px;
   font-family: $accent-font1;
   font-size: 30px;
   padding: 0 15px;
   background-color: $amita-orange;
   color: white;
+}
+
+#index-btn:hover {
+  cursor: pointer;
+  background-color: $filth;
+}
+
+#post-modal {
+  display: none;
 }
 
 // Content //

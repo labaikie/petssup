@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user = current_user
     @users = User.all
     @posts = Post.all.reverse_order.limit(4)
+    @post = Post.new
     @comment = Comment.new
     @news = get_api_news(20)
     @latest_blurb = get_latest_blurb
