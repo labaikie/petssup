@@ -38,8 +38,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts
-    @sounds = @user.sounds
+    @posts = @user.posts.reverse_order
+    @sounds = @user.sounds.reverse_order
     @comment = Comment.new
   end
 

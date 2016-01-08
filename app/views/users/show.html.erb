@@ -1,40 +1,44 @@
-<div id="user-profile">
+<div id="profile-content">
+    <div id="user-profile">
 
-    <div class="accent">A little about <%= @user.name %></div>
-    <div><%= image_tag @user.profile_img,
-        class: 'img-circle profile-img center-block' %>
-    </div>
-    <%= render 'show_profile' %>
-    <%= render 'edit_profile' %>
-
-</div>
-
-<div id="user-content">
-
-    <div class="section-header">
-        <div class="accent"><%= @user.name %>'s Voice</div>
-        <% if current_user == @user %>
-        <div class="buttons" id="btn-to-header">
-            <%= link_to 'Add Voice', sounds_path, method: :create, class: 'btn btn-default' %>
+        <div class="accent">
+            A little about <span class="logo-style"><%= @user.name %></span>
         </div>
-        <% end %>
-    </div>
-    <div id="user-sounds">
-        <%= render "sounds/form" %>
-        <%= render @sounds %>
-    </div>
-
-    <div class="section-header">
-        <div class="accent"><%= @user.name %>'s Posts</div>
-        <% if current_user == @user %>
-        <div class="buttons" id="btn-to-header">
-            <%= link_to 'Create Post', new_post_path, class: 'btn btn-default' %>
+        <div><%= image_tag @user.profile_img,
+            class: 'img-circle profile-img center-block' %>
         </div>
-        <% end %>
-    </div>
-    <div id="user-posts">
-        <%= render @posts %>
+        <%= render 'show_profile' %>
+        <%= render 'edit_profile' %>
+
     </div>
 
+    <div id="user-content">
+
+        <div class="section-header">
+            <div class="accent"><%= @user.name %>'s Voice</div>
+            <% if current_user == @user %>
+            <div class="buttons" id="btn-to-header">
+                <%= link_to 'Add Voice', sounds_path, method: :create, class: 'btn btn-default' %>
+            </div>
+            <% end %>
+        </div>
+        <div id="user-sounds">
+            <%= render "sounds/form" %>
+            <%= render @sounds %>
+        </div>
+
+        <div class="section-header">
+            <div class="accent"><%= @user.name %>'s Posts</div>
+            <% if current_user == @user %>
+            <div class="buttons" id="btn-to-header">
+                <%= link_to 'Create Post', new_post_path, class: 'btn btn-default' %>
+            </div>
+            <% end %>
+        </div>
+        <div id="show-posts">
+            <%= render @posts %>
+        </div>
+
+    </div>
 </div>
 
