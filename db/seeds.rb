@@ -8,7 +8,7 @@ cotton = User.create(
   family_name: "Lee",
   animal_type: "Cotton de Tulear",
   gender: "male",
-  birthday: Date.new(2001,09,10),
+  birthday: Date.new(2001,9,10),
   human_name: "Yeon",
   address: "Seoul, Korea",
   profile_img: "cotton-profile-img.jpg",
@@ -24,10 +24,10 @@ ziola = User.create(
   family_name: "Oh",
   animal_type: "Dachshund",
   gender: "male",
-  birthday: Date.new(2013,09,10),
+  birthday: Date.new(2013,9,10),
   human_name: "June",
   address: "Suwon, Korea",
-  profile_img: "ziola-profile-img.jpg"
+  profile_img: "ziola-profile-img.jpg",
   hobby: "eating",
   fav_food: "anything sweet"
   )
@@ -43,7 +43,7 @@ latte = User.create(
   birthday: Date.new(2015,10,10),
   human_name: "Eunmi",
   address: "Pangyo, Korea",
-  profile_img: "latte-profile-img.jpg"
+  profile_img: "latte-profile-img.jpg",
   hobby: "sleeping",
   fav_food: "nothing"
   )
@@ -94,37 +94,37 @@ ziola_post1 = Post.create(
 
 ziola_post2 = Post.create(
   body: "I ate the pillow",
-  video_url: "posts/ziola_bad.jpg",
+  img_url: "posts/ziola_bad.jpg",
   user_id: ziola.id
   )
 
 ziola_post3 = Post.create(
   body: "I love my human for feeding me",
-  video_url: "posts/ziola_fed.jpg",
+  img_url: "posts/ziola_fed.jpg",
   user_id: ziola.id
   )
 
 latte_post1 = Post.create(
   body: "This is me, on the hunt",
-  video_url: "posts/latte_curious.jpg",
+  img_url: "posts/latte_curious.jpg",
   user_id: latte.id
   )
 
 latte_post2 = Post.create(
   body: "I'm going to eat the whole drawing",
-  video_url: "posts/latte_eatpic.jpg",
+  img_url: "posts/latte_eatpic.jpg",
   user_id: latte.id
   )
 
 latte_post3 = Post.create(
   body: "Let me go to sleep",
-  video_url: "posts/latte_yawn.jpg",
+  img_url: "posts/latte_yawn.jpg",
   user_id: latte.id
   )
 
 latte_post4 = Post.create(
   body: "What do you want, human?",
-  video_url: "posts/latte_held.jpg",
+  img_url: "posts/latte_held.jpg",
   user_id: latte.id
   )
 
