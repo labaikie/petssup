@@ -1,13 +1,15 @@
 @import 'shared';
 
-// Index Page //
+// INDEX PAGE //
+
+// Header & Intro //
 
 #user-index {
   background-color: $anemone-beige;
 }
 
 #index-header {
-  padding-top: 250px;
+  padding-top: 230px;
   padding-bottom: 150px;
   width: 70%;
   margin: 0 auto;
@@ -29,56 +31,68 @@
 
 #latest-blurb {
   font-family: $accent-font1;
-  font-size: 28px;
+  font-size: 30px;
   padding-bottom: 15px;
 }
 
 #index-btn {
   border-radius: 5px;
-  border: 2px solid $lonely-olive;
   font-family: $accent-font1;
   font-size: 30px;
   padding: 0 15px;
-  color: $lonely-olive;
+  background-color: $amita-orange;
+  color: white;
 }
+
+// Content //
 
 #index-content {
   width: 480*2px;
   margin: 0 auto;
 }
 
-#index-post, #index-news {
+#index-post, #index-search-and-news {
   width: 480px;
   float: left;
   margin: 0 auto;
   margin-bottom: 15%;
-  border: 1px solid red;
 }
 
-.column {
-  float: left;
-  margin-top: 28.1%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 550px;
-  min-height: 800px;
-  border: 1px black solid;
-}
-
-#newsfeed-heading {
+#index-post-header, #index-search-header, #index-news-header {
+  margin: 18px auto;
   text-align: center;
-  font-size: 32px;
 }
 
-.column > div, .column > article {
-  margin: 0 15px;
-  padding-bottom: 20px;
+#search-body {
+  margin: 15px;
+}
+
+.btn #search-btn {
+  width: 50px;
+  float: right;
+  background-color: $lonely-olive;
+}
+
+#users-table {
+  background-color: $amita-orange;
+  border-radius: 10px;
+}
+
+article {
+  margin: 15px;
+  padding: 5px;
+  min-height: 100px;
+  background-color: $anemone-beige;
+  border-radius: 10px;
 }
 
 .news-title {
-  font-size: 22px;
+  font-size: 26px;
+  font-family: $accent-font1;
+  color: $lonely-olive;
 }
 
-.news-date {
+.news-date, #index-news-header > span {
   font-size: 14px;
+  color: $amita-orange;
 }

@@ -23,31 +23,27 @@
     %>
     <% end %>
 
-    <div class="buttons">
-      <div class="comments-btn" id="commentsbtn<%post.id%>">
-        <%= post.comments.count %> Comments
-      </div>
+    <div class="comment-menu">
+      <span class="comments-btn" id="commentsbtn<%post.id%>">
+        Comment: <%= post.comments.count %>
+      </span>
       <% if current_user == post.user %>
-      <div class="btn btn-default btn-sm">
-        <%= link_to 'Edit', edit_post_path(post.id) %>
-      </div>
-      <div class="btn btn-danger btn-sm">
-        <%= link_to "Delete", post, method: :delete,
+      <%= link_to 'Edit', edit_post_path(post.id) %>
+      <%= link_to "Delete", post, method: :delete,
             data: { confirm: "You sure?" } %>
-      </div>
       <% end %>
     </div>
 
     <div class="add-comment">
       <%= form_for @comment, :url => post_comments_path(post) do |f| %>
-        <%= f.text_field :body, :placeholder => "...Comment...", class: "new-comment-form" %>
+        <%= f.text_field :body, :placeholder => "Comment or Voice", class: "new-comment-form" %>
         <%= f.select :sound_id do %>
             <%= content_tag :option, "add voice" %>
           <% @user.sounds.each do |s| -%>
             <%= content_tag :option, s.sound_type, value: s.id %>
           <% end %>
         <% end %>
-      <%= f.submit "Comment", class: "btn btn-success btn-xs", id: "new-comment-btn" %>
+      <%= f.submit "Comment", class: "btn btn-xs", id: "new-comment-btn" %>
       <% end %>
     </div>
 

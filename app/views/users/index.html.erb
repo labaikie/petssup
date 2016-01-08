@@ -18,25 +18,59 @@
 
   <div id="index-content">
     <div id="index-post">
-      <div class="accent">
+      <div id="index-post-header" class="accent">
         Latest Posts Around You
       </div>
       <%= render @posts %>
     </div>
-    <div id="index-news">
-    <div class="column" id="newsfeed">
-      <div class ="accent" id="newsfeed-heading">
-        Pet News
+    <div id="index-search-and-news">
+      <div id="index-search">
+        <div id="index-search-header" class ="accent">
+          Search Friends
+        </div>
+        <div id="search-body">
+          <%= form_tag('/users', method:"get") do %>
+            Search by
+            <%= select_tag "search", options_for_select([:name, :animal_type, :gender, :address]) %>
+            <%= text_field_tag :query %>
+            <%= submit_tag "Search", class: "btn btn-default btn-xs", id: "search-btn" %>
+          <% end %>
+          <br>
+          <table class="table" id="users-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Gender</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= link_to user.name, user_path(user) %></td>
+                <td><%= user.animal_type %></td>
+                <td><%= user.gender %></td>
+                <td><%= user.address %></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <% @news.each do |news| %>
-      <article>
-        <%= link_to news['webTitle'], news['webUrl'], class: "news-title" %>
-        &nbsp;&nbsp;
-        <span id="news-date"><%= news['webPublicationDate'] %></span>
-      </article>
-      <% end %>
-    </div>
-    </div>
+      <div id="index-news">
+        <div id="index-news-header" class ="accent">
+          Pet News <span>from the Guardian</span>
+        </div>
+        <% @news.each do |news| %>
+        <article>
+          <%= link_to news['webTitle'], news['webUrl'], class: "news-title" %>
+          &nbsp;&nbsp;
+          <span id="news-date"><%= news['webPublicationDate'] %></span>
+        </article>
+        <% end %>
+      </div>
   </div>
 
+</div>
 </div>

@@ -4,7 +4,7 @@
   display: block;
   margin-bottom: 20px;
   border-radius: 10px;
-  border: 1px black solid;
+  background-color: $filth;
 }
 
 .post > div, .post > img, .post > video {
@@ -16,6 +16,7 @@
 }
 
 .post-user {
+  margin-left: 5px;
   margin-top: 50px;
   font-size: 20px;
 }
@@ -42,14 +43,28 @@
   width: 435px;
 }
 
+.comment-menu {
+  padding-top: 10px;
+}
+
+.comment-menu > a, .comment-menu > span {
+  margin-right: 20px;
+  font-size: 14px;
+  font-family: $accent-font2;
+}
+
 .show-comments, .add-comment {
   clear: both;
   font-size: 14px;
   margin-bottom: 15px;
 }
 
-.add-comment {
-  padding-top: 5px;
+.show-comments {
+  display: none;
+}
+
+.add-comment, .comment {
+  padding: 5px 0 15px 0;
 }
 
 .comment > div, .comment > img {
@@ -60,24 +75,24 @@
   margin-bottom: 5px;
 }
 
-.comments-btn {
-  font-size: 11px;
-}
-
 .comments-btn:hover {
   cursor: pointer;
   color: $creamsicle;
 }
 
 #new-comment-btn, #new-comment-voice-btn, #new-comment-form {
-  float: left;
+  float: right;
   margin-bottom: 10px;
   margin-left: 0;
 }
 
 .new-comment-form {
-  min-width: 65%;
+  min-width: 55%;
   height: 22px;
+}
+
+#new-comment-btn input {
+  width: 20px;
 }
 
 .comment-icon {

@@ -4,10 +4,21 @@ class UsersController < ApplicationController
   def index
     @user = current_user
     @users = User.all
-    @posts = Post.all.limit(6) # edit to popular posts later
+    @posts = Post.all.reverse_order.limit(4)
     @comment = Comment.new
-    @news = get_api_news(10)
+    @news = get_api_news(20)
     @latest_blurb = get_latest_blurb
+    if params[:query]
+      search_by = params[:search].to_sym
+      user_list = User.all
+      @users = []
+      user_list.each do |user|
+      if user[search_by].downcase.include? params[:query].downcase
+        @users << user
+      end
+    end
+    return @users
+    end
   end
 
   def get_api_news(count)
