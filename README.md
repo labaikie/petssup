@@ -3,6 +3,7 @@ Application Name: "Petssup"
 Heroku Link: https://petssup.herokuapp.com/
 Trello: https://trello.com/b/GpQor4Cb/project-2
 GitHub: https://github.com/labaikie/project-2
+API Acceess Point: http://petssup.herokuapp.com/api/posts
 
 
 1. Introduction
@@ -17,6 +18,9 @@ GitHub: https://github.com/labaikie/project-2
     - This full-stack app is developed with Ruby on Rails.
     - It utilizes PostgreSQL as its database.
     - Javascript and JQuery were used to create modals, as well as user-responsive CSS styling.
+    - Four models have been created and are CRUDible (User, Post, Comment, Sound).
+    - The app is RESTful.
+    - The app also has an API access point; post data are accessible externally.
 
 3. Unsolved Problems
     - The app currently does not allow users to befriend other users
