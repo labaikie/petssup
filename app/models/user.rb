@@ -11,4 +11,12 @@ class User < ActiveRecord::Base
   has_many :sounds
   has_many :comments
 
+  def age
+    today = Date.today
+    age = today.year - birthday.year
+    age -= 1 if birthday.strftime("%m%d").to_i > today.strftime("%m%d").to_i
+    age
+  end
+
+
 end
