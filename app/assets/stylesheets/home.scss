@@ -28,7 +28,7 @@
 }
 
 #main-msg {
-  font-size: 35px;
+  font-size: $accent;
 }
 
 #main-msg > span{
@@ -46,7 +46,7 @@
 }
 
 #about-msg > div {
-  margin: 15% 0;
+  margin: 13% 0;
 }
 
 .icon {
@@ -56,12 +56,12 @@
 
 .about-heading {
   font-family: $logo-font;
-  font-size: 35px;
+  font-size: $accent;
   color: $lonely-olive;
 }
 
 .desc {
   padding: 10px;
-  font-size: 28px;
+  font-size: 30px;
   color: $lonely-olive;
 }
