@@ -3,6 +3,7 @@
 // SHARED STYLING //
 
 header {
+  z-index: 2;
   position: fixed;
   padding: 5px 0;
   top: 0;
@@ -37,7 +38,6 @@ header div {
 }
 
 footer {
-  clear: both;
   min-height: $banner;
   background-color: $filth;
 }
@@ -63,6 +63,7 @@ footer div {
 
 .logo-style {
   font-family: $logo-font;
+  color: $lonely-olive;
 }
 
 .logo-style > span {

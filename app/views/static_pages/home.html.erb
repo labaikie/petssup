@@ -1,29 +1,31 @@
 <div id="welcome">
   <%= image_tag @random, id: "background-image" %>
-  <div id="logo">Petss<span>up</span></div>
-  <div class="main-msg"><span>
-    <span class="logo-style">Petssup</span> is the social network for pets by pets. At <span class="logo-style">Petssup</span>, your pets voice themselves freely on stuff they love, including food, humans, and other pets! If your pet is not yet a part of this latest trend, please let them borrow your email and sign up so that they don't feel left behind!
-  </span></div>
-  <div id="frame">
-    <div id="about">
-      <div class="square">
-        <div class="icon"><i class="fa fa-music"></i></div>
-        <div>Hear their voice</div>
-        <div class="desc">Record your pet's voices and keep them saved. Have your pet interact with others with them.</div>
-      </div>
-      <div class="square">
-        <div class="icon"><i class="fa fa-camera-retro"></i></div>
-        <div>Share their moment</div>
-        <div class="desc">Post up pictures and videos of your pets. What have they been up to lately?</div>
-      </div>
-      <div class="square">
-        <div class="icon"><i class="fa fa-smile-o"></i></div>
-        <div>Or just browse & stalk</div>
-        <div class="desc">Search and view other pets' profile and postings!</div>
-      </div>
+  <div id="welcome-msg">
+    <div id="main-logo" class="logo-style">Petss<span>up</span></div>
+    <div id="main-msg"><span>
+      <span class="logo-style">Petss<span>up</span></span> is the social network for pets by pets. At <span class="logo-style">Petss<span>up</span></span>, pets voice themselves freely on food, humans, and other pets! If your pet is not yet a part of this latest trend, please lend him/her your email so that they can sign up and not feel left out!
+    </span></div>
+  </div>
+</div>
+
+<div id="about" class="container-fluid">
+  <div id="about-msg" class="row">
+    <div class="col-md-4 col-xs-18">
+      <div class="icon"><i class="fa fa-music"></i></div>
+      <div class="about-heading">Hear Their Voice</div>
+      <div class="desc">Record your pets' voice so that they can interact with others through voicing!</div>
+    </div>
+    <div class="col-md-4 col-xs-18">
+      <div class="icon"><i class="fa fa-camera-retro"></i></div>
+      <div class="about-heading">Share Their Moment</div>
+      <div class="desc">Post up pictures and videos of your pets. What have they been up to lately?</div>
+    </div>
+    <div class="col-md-4 col-xs-18">
+      <div class="icon"><i class="fa fa-smile-o"></i></div>
+      <div class="about-heading">Or Just Browse & Stalk</div>
+      <div class="desc">Search and view other pet profiles and postings!</div>
     </div>
   </div>
-
 </div>
 
 <%= render "shared/new_session" %>

@@ -1,60 +1,64 @@
 @import 'symbols';
 
+// First Half - Welcome //
+
+#welcome {
+  position: relative;
+  width: 100%;
+}
+
 #background-image {
-  position: absolute;
-  top: 0;
-  z-index: -3;
-  width: 1440px;
+  width: 100%;
   opacity: 0.95;
 }
 
-#logo {
-  margin: 36% 10% 0 10%;
-  font-family: $logo-font;
-  font-size: 190px;
-  color: $lonely-olive;
-}
-
-#logo > span {
-  color: $creamsicle;
-}
-
-.main-msg, #about {
-  margin: 10% 10% 0 10%;
-  min-height: 200px;
-  font-size: $accent;
-  color: $lonely-olive;
-}
-
-.main-msg > span {
-  background-color: $amita-orange;
-}
-
-#frame {
+#welcome-msg {
+  position: absolute;
+  top: 30%;
+  left: 0;
   width: 100%;
-  min-height: 900px;
+}
+
+#welcome-msg > div {
+  margin: 5% 5%;
+}
+
+#main-logo {
+  font-size: 200px;
+}
+
+#main-msg {
+  font-size: 35px;
+}
+
+#main-msg > span{
+ background-color: $amita-orange;
+}
+
+// Second Half - About //
+
+#about {
   background-color: $anemone-beige;
 }
 
-#about {
-  padding-top: 39px;
-}
-
-.square {
-  margin: 20% auto 20% auto;
-  padding: 20px;
-  float: left;
-  width: 380px;
-  height: 400px;
+#about-msg {
+  margin: 15% 0;
   text-align: center;
 }
 
 .icon {
-  font-size: 150px;
+  font-size: 160px;
   color: $creamsicle;
 }
 
+.about-heading {
+  font-family: $logo-font;
+  color: white;
+  font-size: 28px;
+}
+
 .desc {
+  padding: 10px;
   font-size: 24px;
   color: $lonely-olive;
 }
