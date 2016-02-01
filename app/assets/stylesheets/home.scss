@@ -42,8 +42,11 @@
 }
 
 #about-msg {
-  margin: 15% 0;
   text-align: center;
+}
+
+#about-msg > div {
+  margin: 15% 0;
 }
 
 .icon {
@@ -53,12 +56,12 @@
 
 .about-heading {
   font-family: $logo-font;
-  color: white;
-  font-size: 28px;
+  font-size: 35px;
+  color: $lonely-olive;
 }
 
 .desc {
   padding: 10px;
-  font-size: 24px;
+  font-size: 28px;
   color: $lonely-olive;
 }
