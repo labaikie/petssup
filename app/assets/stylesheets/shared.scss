@@ -1,36 +1,6 @@
+@import 'symbols';
+
 // SHARED STYLING //
-
-// Fonts //
-
-$logo-font: 'Pacifico', cursive;
-$accent-font1: 'Swanky and Moo Moo', cursive;
-$accent-font2: 'Laila', serif;
-$main-font: 'Rokkitt', serif;
-
-// Colors //
-
-$creamsicle: #FFBF66;
-$amita-orange: #D99969;
-$anemone-beige: #B3937C;
-$filth: #907F75;
-$lonely-olive: #434223;
-
-// Sizes //
-
-$small-font: 16px;
-$banner: 55px;
-$accent: 34px;
-$min-margin: 15px;
-$max-margin: 25px;
-
-// Other Shared //
-
-body {
-  margin: 0 auto;
-  font-family: $main-font;
-  font-size: $small-font;
-  color: $lonely-olive;
-}
 
 header {
   position: fixed;

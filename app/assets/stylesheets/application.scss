@@ -7,5 +7,11 @@
 @import 'bootstrap';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import 'users_new_login';
-@import 'home';
+@import 'symbols';
+
+body {
+  margin: 0 auto;
+  font-family: $main-font;
+  font-size: $small-font;
+  color: $lonely-olive;
+}
