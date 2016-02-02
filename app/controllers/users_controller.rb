@@ -44,10 +44,6 @@ class UsersController < ApplicationController
     @comment = Comment.new
   end
 
-  def new
-    @user = User.new
-  end
-
   def create
     if User.new(user_params).save
       flash[:success] = "Thanks for joining!"
