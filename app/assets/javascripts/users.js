@@ -13,9 +13,7 @@ $(document).on('ready page:load', function() {
   var scroll_pos = 0;
   $(document).scroll(function() {  // header change color upon scroll down
       scroll_pos = $(this).scrollTop();
-      if(scroll_pos < 800) {
-          $("header").css('background-color', 'transparent');
-      } else {
+      if(scroll_pos > 1) {
           $("header").css('background-color', '#907F75');
           $("header").css('opacity', '0.95');
       }

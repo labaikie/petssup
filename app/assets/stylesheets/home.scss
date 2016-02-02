@@ -14,7 +14,7 @@
 
 #welcome-msg {
   position: absolute;
-  top: 30%;
+  top: 27%;
   left: 0;
   width: 100%;
 }
@@ -46,7 +46,7 @@
 }
 
 #about-msg > div {
-  margin: 13% 0;
+  margin: 12% 0;
 }
 
 .icon {
@@ -64,4 +64,8 @@
   padding: 10px;
   font-size: 30px;
   color: $lonely-olive;
+}
+
+.desc span {
+  background-color: $amita-orange;
 }

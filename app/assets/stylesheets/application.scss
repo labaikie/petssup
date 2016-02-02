@@ -15,3 +15,13 @@ body {
   font-size: $small-font;
   color: $lonely-olive;
 }
+
+a {
+  color: $creamsicle;
+  font-family: $logo-font;
+}
+
+a:hover{
+  color: $amita-orange;
+  text-decoration: none;
+}
