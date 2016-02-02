@@ -1,4 +1,4 @@
-<div id ="joinDp">
+<div id ="joinDp" class="container-fluid">
   <div class="screen">
     <div class="message">
 
@@ -29,7 +29,8 @@
       </div>
 
       <%= f.submit "Sign-up" %>
-      <%= link_to "Already a Member? Log-in", new_session_path %>
+      <a id="login-link">Log-in</a>
+      <%= link_to "Back Home", root_path %>
     <% end %>
 
 

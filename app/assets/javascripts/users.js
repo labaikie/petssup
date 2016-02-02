@@ -9,7 +9,6 @@ $(document).on('ready page:load', function() {
     $('#post-modal').fadeToggle(300);
   });
 
-
   var scroll_pos = 0;
   $(document).scroll(function() {  // header change color upon scroll down
       scroll_pos = $(this).scrollTop();
@@ -23,6 +22,14 @@ $(document).on('ready page:load', function() {
     $(hide).css('display', 'none');
     $(show).css('display', 'block');
   };
+
+  $('#login-link').click(function(){
+    hideAndShow('#joinDp','#loginDp')
+  })
+
+  $('#join-link').click(function(){
+    hideAndShow('#loginDp','#joinDp')
+  })
 
   $('#edit-profile-btn').click(function(){
     hideAndShow('#show-profile','#edit-profile');

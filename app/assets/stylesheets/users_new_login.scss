@@ -4,7 +4,7 @@
   display: none;
 }
 
-#joinDp, #loginDp, #loginDpp, #joinDpp, #postDp {
+#joinDp, #loginDp, #postDp {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -16,13 +16,13 @@
 
 .screen {
   margin: 15% auto 0 auto;
-  width: 45%;
+  width: 50%;
   border-radius: 10px;
   background-color: $anemone-beige;
 }
 
 .message {
-  width: 80%;
+  width: 60%;
   padding: 5% 0;
   margin: auto;
 }
