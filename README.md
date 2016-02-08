@@ -2,7 +2,7 @@
 Application Name: "Petssup"
 Heroku Link: https://petssup.herokuapp.com/
 Trello: https://trello.com/b/GpQor4Cb/project-2
-GitHub: https://github.com/labaikie/project-2
+GitHub: https://github.com/labaikie/petssup
 API Acceess Point: http://petssup.herokuapp.com/api/posts
 
 
