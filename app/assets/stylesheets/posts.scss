@@ -4,7 +4,7 @@
   display: block;
   margin-bottom: 20px;
   border-radius: 10px;
-  background-color: $filth;
+  background-color: white;
 }
 
 .post > div, .post > img, .post > video {
@@ -36,7 +36,9 @@
 }
 
 .post-image {
-  width: 435px;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .post-video {

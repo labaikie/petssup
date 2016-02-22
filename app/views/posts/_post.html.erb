@@ -11,7 +11,8 @@
       </span>
     </div>
 
-    <div class="post-body"><%= post.body %></div>
+    <div class="post-body">
+    <%= post.body %>
     <% if post.img_url? %>
     <%= image_tag post.img_url,
         class: "img-rounded post-image"
@@ -22,6 +23,7 @@
         class: "post-video"
     %>
     <% end %>
+    </div>
 
     <div class="comment-menu">
       <span class="comments-btn" id="commentsbtn<%post.id%>">
