@@ -1,27 +1,22 @@
 @import 'symbols';
 
 #profile-content {
-  background-color: $amita-orange;
   width: 70%;
   margin: 0 auto;
 }
 
 #user-profile, #user-content {
-  float: left;
-  margin: 70px 0;
-  padding: 20px 0;
+  padding: 60px 0;
 }
 
 
 #user-profile {
-  width: 40%;
   background-color: $amita-orange;
   border-radius: 10px;
 }
 
 #user-content {
-  width: 60%;
-  border: $anemone-beige 4px solid;
+  background-color: $anemone-beige;
   border-radius: 10px;
 }
 
@@ -60,7 +55,6 @@
 
 #show-posts {
   margin: 0 auto;
-  width: 480px;
 }
 
 #create-post-btn {
