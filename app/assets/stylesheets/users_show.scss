@@ -1,6 +1,10 @@
 @import 'symbols';
 
 #profile-content {
+  background-color: $filth;
+}
+
+#profile-content > .row {
   width: 70%;
   margin: 0 auto;
 }
