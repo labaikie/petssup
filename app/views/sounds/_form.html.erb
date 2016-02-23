@@ -7,10 +7,8 @@
     <% end %>
 
     <div class="form-group">
-      <span><%= f.label "Voice Type" %></span>
-      <span><%= f.text_field :sound_type %></span>
-      <span><%=f.label "Voice Url" %></span>
-      <span><%=f.text_field :sound_url %></span>
+      <span><%= f.text_field :sound_type, placeholder: 'Voice Type' %></span>
+      <span><%=f.text_field :sound_url, placeholder: 'Voice Url' %></span>
       <%= f.submit "Add", class: "btn btn-default btn-sm", id: "new-sound-btn" %>
     </div>
 

@@ -42,7 +42,8 @@
 }
 
 .post-video {
-  width: 435px;
+  margin: 0 auto;
+  width: 95%;
 }
 
 .comment-menu {
@@ -87,6 +88,10 @@
   float: right;
   margin-bottom: 10px;
   margin-left: 0;
+}
+
+#new-comment-btn {
+  background-color: $amita-orange;
 }
 
 .new-comment-form {
